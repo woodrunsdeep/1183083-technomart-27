@@ -59,6 +59,32 @@
                 </li>
             </ul>
         </section>
+        <section class="filter">
+          <h2>Фильтр товаров</h2>
+          <!-- Здесь будет фильтр по цене -->
+          <form action="POST"></form>
+
+          <form action="POST">
+            <fieldset>
+              <legend>Производители:</legend>
+              <ul>
+                <li><span></span><label><input type="checkbox" name="manufacturer" id="Bosch">Bosch</label></li>
+                <li><span></span><label><input type="checkbox" name="manufacturer" id="Интерскол">Интерскол</label></li>
+                <li><span></span><label><input type="checkbox" name="manufacturer" id="Makita">Makita</label></li>
+                <li><span></span><label><input type="checkbox" name="manufacturer" id="Dewalt">Dewalt</label></li>
+                <li><span></span><label><input type="checkbox" name="manufacturer" id="Hitachi">Hitachi</label></li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Питание:</legend>
+              <ul>
+                <li><span></span><label><input type="radio" name="power-supply" id="battery">Аккумуляторные</label></li>
+                <li><span></span><label><input type="radio" name="power-supply" id="ac-supply">Сетевые</label></li>
+              </ul>
+            </fieldset>
+            <button type="submit">Показать</button>
+          </form>
+        </section>
     </main>
     <footer class="main-footer">
       <div>
