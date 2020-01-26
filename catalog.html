@@ -9,12 +9,12 @@
     <header>
       <div>
         <a href="#"><img src="https://via.placeholder.com/220x47" width="220" height="47" alt="Логотип Интернет-магазина Техномарт"></a>
-        <form action="POST">
+        <form method="POST">
           <input type="search" placeholder="Поиск:">
         </form>
-        <a href="bookmarks.html">Закладки: 0</a>
-        <a href="cart.html">Корзина: 10</a>
-        <a href="checkout.html">Оформить заказ</a>
+        <a href="/bookmarks.html">Закладки: 0</a>
+        <a href="/cart.html">Корзина: 10</a>
+        <a href="/checkout.html">Оформить заказ</a>
       </div>
       <div>
         <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
@@ -23,20 +23,20 @@
           <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </address>
         <ul class="user-profile">
-          <li><button class="user-profile__username" type="button">Равшан Джамшутович</button></li>
-          <li><button class="user-profile__logout" type="button">Выйти</button></li>
-          <li><button class="user-profile__orders" type="button">Мои заказы</button></li>
-          <li><button class="user-profile__profile" type="button">Личный кабинет</button></li>
+          <li><a href="#" class="user-profile__username">Равшан Джамшутович</a></li>
+          <li><a href="#" class="user-profile__logout">Выйти</a></li>
+          <li><a href="#" class="user-profile__orders">Мои заказы</a></li>
+          <li><a href="#" class="user-profile__profile">Личный кабинет</a></li>
         </ul>
         <nav class="main-nav">
           <ul class="main-nav__list">
-            <li class="main-nav__item"><a href="index.html">Главная</a></li>
-            <li class="main-nav__item"><a href="about-us.html">Компания</a></li>
-            <li class="main-nav__item"><a href="catalog.html">Каталог</a></li>
-            <li class="main-nav__item"><a href="news.html">Новости</a></li>
-            <li class="main-nav__item"><a href="speacial-deals.html">Спецпредложения</a></li>
-            <li class="main-nav__item"><a href="delivery.html">Доставка</a></li>
-            <li class="main-nav__item"><a href="contact.html">Контакты</a></li>
+            <li class="main-nav__item"><a href="/index.html">Главная</a></li>
+            <li class="main-nav__item"><a href="/about-us.html">Компания</a></li>
+            <li class="main-nav__item"><a href="/catalog.html">Каталог</a></li>
+            <li class="main-nav__item"><a href="/news.html">Новости</a></li>
+            <li class="main-nav__item"><a href="/speacial-deals.html">Спецпредложения</a></li>
+            <li class="main-nav__item"><a href="/delivery.html">Доставка</a></li>
+            <li class="main-nav__item"><a href="/contact.html">Контакты</a></li>
           </ul>
         </nav>
       </div>
@@ -46,13 +46,13 @@
             <h1>Перфораторы</h1>
             <ul class="breadcrumbs">
                 <li class="breadcrumbs__item">
-                    <a href="index.html">Главная</a>
+                    <a href="/index.html">Главная</a>
                 </li>
                 <li class="breadcrumbs__item">
-                    <a href="catalog.html">Каталог</a>
+                    <a href="/catalog.html">Каталог</a>
                 </li>
                 <li class="breadcrumbs__item">
-                    <a href="tools.html">Инструменты</a>
+                    <a href="/tools.html">Инструменты</a>
                 </li>
                 <li class="breadcrumbs__item">
                     <a>Перфораторы</a>
@@ -62,44 +62,44 @@
         <section class="filter">
           <h2>Фильтр товаров</h2>
           <!-- Здесь будет фильтр по цене -->
-          <form action="POST"></form>
+          <form method="POST"></form>
 
-          <form action="POST">
+          <form method="POST">
             <fieldset>
               <legend>Производители:</legend>
               <ul class="manufacturer-list">
                 <li class="manufacturer-list__item">
                   <span class="custom-checkbox"></span>
                   <label>
-                    <input type="checkbox" name="manufacturer" id="Bosch">
+                    <input type="checkbox" name="manufacturer"  value="Bosch">
                     Bosch
                   </label>
                 </li>
                 <li class="manufacturer-list__item">
                   <span class="custom-checkbox"></span>
                   <label>
-                    <input type="checkbox" name="manufacturer" id="Интерскол">
+                    <input type="checkbox" name="manufacturer"  value="Interskol">
                     Интерскол
                   </label>
                 </li>
                 <li class="manufacturer-list__item">
                   <span class="custom-checkbox"></span>
                   <label>
-                    <input type="checkbox" name="manufacturer" id="Makita">
+                    <input type="checkbox" name="manufacturer"  value="Makita">
                     Makita
                   </label>
                 </li>
                 <li class="manufacturer-list__item">
                   <span class="custom-checkbox"></span>
                   <label>
-                    <input type="checkbox" name="manufacturer" id="Dewalt">
+                    <input type="checkbox" name="manufacturer"  value="Dewalt">
                     Dewalt
                   </label>
                 </li>
                 <li class="manufacturer-list__item">
                   <span class="custom-checkbox"></span>
                   <label>
-                    <input type="checkbox" name="manufacturer" id="Hitachi">
+                    <input type="checkbox" name="manufacturer"  value="Hitachi">
                     Hitachi
                   </label>
                 </li>
@@ -108,8 +108,8 @@
             <fieldset>
               <legend>Питание:</legend>
               <ul>
-                <li><span></span><label><input type="radio" name="power-supply" id="battery">Аккумуляторные</label></li>
-                <li><span></span><label><input type="radio" name="power-supply" id="ac-supply">Сетевые</label></li>
+                <li><span></span><label><input type="radio" name="power-supply" value="battery">Аккумуляторные</label></li>
+                <li><span></span><label><input type="radio" name="power-supply" value="ac-supply">Сетевые</label></li>
               </ul>
             </fieldset>
             <button type="submit">Показать</button>
@@ -224,29 +224,29 @@
         </address>
       </div>
       <ul class="secondary-nav">
-        <li class="secondary-nav__item"><a href="about-us.html">Компания</a></li>
-        <li class="secondary-nav__item"><a href="news.html">Новости</a></li>
-        <li class="secondary-nav__item"><a href="catalog.html">Каталог</a></li>
-        <li class="secondary-nav__item"><a href="delivery.html">Доставка</a></li>
-        <li class="secondary-nav__item"><a href="contact.html">Контакты</a></li>
-        <li class="secondary-nav__item"><a href="materials.html">Материалы</a></li>
-        <li class="secondary-nav__item"><a href="equipment.html">Техника</a></li>
-        <li class="secondary-nav__item"><a href="tools.html">Инструменты</a></li>
-        <li class="secondary-nav__item"><a href="special-deals.html">Спецпредложения</a></li>
+        <li class="secondary-nav__item"><a href="/about-us.html">Компания</a></li>
+        <li class="secondary-nav__item"><a href="/news.html">Новости</a></li>
+        <li class="secondary-nav__item"><a href="/catalog.html">Каталог</a></li>
+        <li class="secondary-nav__item"><a href="/delivery.html">Доставка</a></li>
+        <li class="secondary-nav__item"><a href="/contact.html">Контакты</a></li>
+        <li class="secondary-nav__item"><a href="/materials.html">Материалы</a></li>
+        <li class="secondary-nav__item"><a href="/equipment.html">Техника</a></li>
+        <li class="secondary-nav__item"><a href="/tools.html">Инструменты</a></li>
+        <li class="secondary-nav__item"><a href="/special-deals.html">Спецпредложения</a></li>
       </ul>
       <p class="copyright">
         &copy; 2010–2019 Компания «Техномарт»<br>
         Все права защищены
       </p>
       <ul class="social-links">
-        <li class="social-links__item"><a href="#">Вконтакте</a></li>
-        <li class="social-links__item"><a href="#">Фейсбук</a></li>
-        <li class="social-links__item"><a href="#">Инстаграм</a></li>
+        <li class="social-links__item"><a href="#" target="_blank">Вконтакте</a></li>
+        <li class="social-links__item"><a href="#" target="_blank">Фейсбук</a></li>
+        <li class="social-links__item"><a href="#" target="_blank">Инстаграм</a></li>
       </ul>
       <p class="feedback">Обратная связь: <br>
-        <a href="mailto:mail@htmlacademy.ru">htmlacademy.ru</a></p>
+        <a href="mailto:mail@htmlacademy.ru" target="_blank">mail@htmlacademy.ru</a></p>
       <p class="made-by">Разработано – <br>
-        <a href="htmlacademy.ru">htmlacademy.ru</a>
+        <a href="https://htmlacademy.ru" target="_blank">htmlacademy.ru</a>
       </p>
     </footer>
     <script src="js/script.js"></script>
