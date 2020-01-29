@@ -12,9 +12,9 @@
         <form method="POST">
           <input type="search" placeholder="Поиск:">
         </form>
-        <a href="/bookmarks.html">Закладки: 0</a>
-        <a href="/cart.html">Корзина: 10</a>
-        <a href="/checkout.html">Оформить заказ</a>
+        <a href="./bookmarks.html">Закладки: 0</a>
+        <a href="./cart.html">Корзина: 10</a>
+        <a href="./checkout.html">Оформить заказ</a>
       </div>
       <div>
         <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
@@ -30,13 +30,13 @@
         </ul>
         <nav class="main-nav">
           <ul class="main-nav__list">
-            <li class="main-nav__item"><a href="/index.html">Главная</a></li>
-            <li class="main-nav__item"><a href="/about-us.html">Компания</a></li>
-            <li class="main-nav__item"><a href="/catalog.html">Каталог</a></li>
-            <li class="main-nav__item"><a href="/news.html">Новости</a></li>
-            <li class="main-nav__item"><a href="/speacial-deals.html">Спецпредложения</a></li>
-            <li class="main-nav__item"><a href="/delivery.html">Доставка</a></li>
-            <li class="main-nav__item"><a href="/contact.html">Контакты</a></li>
+            <li class="main-nav__item"><a href="./index.html">Главная</a></li>
+            <li class="main-nav__item"><a href="./about-us.html">Компания</a></li>
+            <li class="main-nav__item"><a href="./catalog.html">Каталог</a></li>
+            <li class="main-nav__item"><a href="./news.html">Новости</a></li>
+            <li class="main-nav__item"><a href="./speacial-deals.html">Спецпредложения</a></li>
+            <li class="main-nav__item"><a href="./delivery.html">Доставка</a></li>
+            <li class="main-nav__item"><a href="./contact.html">Контакты</a></li>
           </ul>
         </nav>
       </div>
@@ -46,13 +46,13 @@
             <h1>Перфораторы</h1>
             <ul class="breadcrumbs">
                 <li class="breadcrumbs__item">
-                    <a href="/index.html">Главная</a>
+                    <a href="./index.html">Главная</a>
                 </li>
                 <li class="breadcrumbs__item">
-                    <a href="/catalog.html">Каталог</a>
+                    <a href="./catalog.html">Каталог</a>
                 </li>
                 <li class="breadcrumbs__item">
-                    <a href="/tools.html">Инструменты</a>
+                    <a href="./tools.html">Инструменты</a>
                 </li>
                 <li class="breadcrumbs__item">
                     <a>Перфораторы</a>
@@ -60,11 +60,16 @@
             </ul>
         </section>
         <section class="filter">
-          <h2>Фильтр товаров</h2>
-          <!-- Здесь будет фильтр по цене -->
-          <form method="POST"></form>
-
+          <h2>Фильтр:</h2>
           <form method="POST">
+            <fieldset>
+              <legend>Цена:</legend>
+              <!-- Подключить https://refreshless.com/nouislider/ -->
+              <div id="slider"></div>
+              <input type="text" name="min-price" id="min-price">
+              <span>–</span>
+              <input type="text" name="max-price" id="max-price">
+            </fieldset>
             <fieldset>
               <legend>Производители:</legend>
               <ul class="manufacturer-list">
@@ -114,6 +119,16 @@
             </fieldset>
             <button type="submit">Показать</button>
           </form>
+        </section>
+			  <section class="sorting-block">
+					<h2>Сортировка:</h2>
+					<ul class="sorting-property__list">
+						<li class="sorting-property__item"><a href="#">По цене</a></li>
+						<li class="sorting-property__item"><a href="#">По типу</a></li>
+						<li class="sorting-property__item"><a href="#">По функционалу</a></li>
+						<li class="sorting-property__item--order-ascending"><a href="#"></a></li>
+						<li class="sorting-property__item--order-descending"><a href="#"></a></li>
+					</ul>
         </section>
         <section class="product-list">
           <h2>Список товаров</h2>
@@ -214,6 +229,20 @@
             </li>
           </ul>
         </section>
+        <ul class="pagination-list">
+          <li class="pagination-list__item pagination-list__item--current-page"><a>1</a></li>
+          <li class="pagination-list__item"><a href="#">2</a></li>
+          <li class="pagination-list__item"><a href="#">3</a></li>
+          <li class="pagination-list__item pagination-list__item--next-page"><a href="#">Следующая</a></li>
+        </ul>
+        <section class="about-product">
+            <h2>Пара слов о перфораторах</h2>
+            <p>
+              Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+              Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br>
+              В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+            </p>
+        </section>
     </main>
     <footer class="main-footer">
       <div>
@@ -224,15 +253,15 @@
         </address>
       </div>
       <ul class="secondary-nav">
-        <li class="secondary-nav__item"><a href="/about-us.html">Компания</a></li>
-        <li class="secondary-nav__item"><a href="/news.html">Новости</a></li>
-        <li class="secondary-nav__item"><a href="/catalog.html">Каталог</a></li>
-        <li class="secondary-nav__item"><a href="/delivery.html">Доставка</a></li>
-        <li class="secondary-nav__item"><a href="/contact.html">Контакты</a></li>
-        <li class="secondary-nav__item"><a href="/materials.html">Материалы</a></li>
-        <li class="secondary-nav__item"><a href="/equipment.html">Техника</a></li>
-        <li class="secondary-nav__item"><a href="/tools.html">Инструменты</a></li>
-        <li class="secondary-nav__item"><a href="/special-deals.html">Спецпредложения</a></li>
+        <li class="secondary-nav__item"><a href="./about-us.html">Компания</a></li>
+        <li class="secondary-nav__item"><a href="./news.html">Новости</a></li>
+        <li class="secondary-nav__item"><a href="./catalog.html">Каталог</a></li>
+        <li class="secondary-nav__item"><a href="./delivery.html">Доставка</a></li>
+        <li class="secondary-nav__item"><a href="./contact.html">Контакты</a></li>
+        <li class="secondary-nav__item"><a href="./materials.html">Материалы</a></li>
+        <li class="secondary-nav__item"><a href="./equipment.html">Техника</a></li>
+        <li class="secondary-nav__item"><a href="./tools.html">Инструменты</a></li>
+        <li class="secondary-nav__item"><a href="./special-deals.html">Спецпредложения</a></li>
       </ul>
       <p class="copyright">
         &copy; 2010–2019 Компания «Техномарт»<br>
