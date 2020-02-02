@@ -9,8 +9,9 @@
     <header>
       <div>
         <a href="#"><img src="img/logo.svg" width="109" height="19" alt="Интернет-магазин Техномарт"></a>
-        <form method="POST">
-          <input type="search" placeholder="Поиск:">
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <label for="site-search" class="visually-hidden">Поиск</label>  
+          <input type="search" id="site-search" placeholder="Поиск:" name="query" required>
         </form>
         <a href="./bookmarks.html">Закладки: 0</a>
         <a href="./cart.html">Корзина: 10</a>
@@ -19,7 +20,7 @@
       <div>
         <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
         <address>
-          <a href="tel:78125550555">+7 (812) 555-05-55</a>
+          <span class="visually-hidden">Наш телефон:</span><a href="tel:78125550555">+7 (812) 555-05-55</a>
           <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </address>
         <ul class="user-profile">
@@ -61,7 +62,7 @@
         </section>
         <section class="filter">
           <h2>Фильтр:</h2>
-          <form method="POST">
+          <form action="https://echo.htmlacademy.ru" method="POST">
             <fieldset>
               <legend>Цена:</legend>
               <!-- Подключить https://refreshless.com/nouislider/ -->
@@ -72,39 +73,39 @@
             </fieldset>
             <fieldset>
               <legend>Производители:</legend>
-              <ul class="manufacturer-list">
-                <li class="manufacturer-list__item">
+              <ul class="brands-list">
+                <li class="brands-list__item">
                   <span class="custom-checkbox"></span>
                   <label>
-                    <input type="checkbox" name="manufacturer"  value="Bosch">
+                    <input type="checkbox" name="brand"  value="Bosch">
                     Bosch
                   </label>
                 </li>
-                <li class="manufacturer-list__item">
+                <li class="brands-list__item">
                   <span class="custom-checkbox"></span>
                   <label>
-                    <input type="checkbox" name="manufacturer"  value="Interskol">
+                    <input type="checkbox" name="brand"  value="Interskol">
                     Интерскол
                   </label>
                 </li>
-                <li class="manufacturer-list__item">
+                <li class="brands-list__item">
                   <span class="custom-checkbox"></span>
                   <label>
-                    <input type="checkbox" name="manufacturer"  value="Makita">
+                    <input type="checkbox" name="brand"  value="Makita">
                     Makita
                   </label>
                 </li>
-                <li class="manufacturer-list__item">
+                <li class="brands-list__item">
                   <span class="custom-checkbox"></span>
                   <label>
-                    <input type="checkbox" name="manufacturer"  value="Dewalt">
+                    <input type="checkbox" name="brand"  value="Dewalt">
                     Dewalt
                   </label>
                 </li>
-                <li class="manufacturer-list__item">
+                <li class="brands-list__item">
                   <span class="custom-checkbox"></span>
                   <label>
-                    <input type="checkbox" name="manufacturer"  value="Hitachi">
+                    <input type="checkbox" name="brand"  value="Hitachi">
                     Hitachi
                   </label>
                 </li>
