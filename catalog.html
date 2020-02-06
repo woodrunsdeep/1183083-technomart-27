@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <header>
-      <div>
-        <a href="#"><img src="img/logo.svg" width="109" height="19" alt="Интернет-магазин Техномарт"></a>
-        <form action="https://echo.htmlacademy.ru" method="POST">
+    <header class="page-header">
+      <div class="wrapper">
+        <a class="technomart-logo" href="#"><img src="img/logo.svg" width="109" height="19" alt="Интернет-магазин Техномарт"></a>
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="POST">
           <label for="site-search" class="visually-hidden">Поиск</label>  
           <input type="search" id="site-search" placeholder="Поиск:" name="query" required>
         </form>
@@ -19,17 +19,17 @@
         <a href="./cart.html">Корзина: 10</a>
         <a href="./checkout.html">Оформить заказ</a>
       </div>
-      <div>
+      <div class="wrapper">
         <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
         <address>
           <span class="visually-hidden">Наш телефон:</span><a href="tel:78125550555">+7 (812) 555-05-55</a>
           <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </address>
-        <ul class="user-profile">
-          <li><a href="#" class="user-profile__username">Равшан Джамшутович</a></li>
-          <li><a href="#" class="user-profile__logout">Выйти</a></li>
-          <li><a href="#" class="user-profile__orders">Мои заказы</a></li>
-          <li><a href="#" class="user-profile__profile">Личный кабинет</a></li>
+        <ul class="user-navigation">
+          <li><a href="#" class="user-navigation__item user-navigation__item--username">Равшан Джамшутович</a></li>
+          <li><a href="#" class="user-navigation__item user-navigation__item--logout"><span class="visually-hidden">Выйти</span></a></li>
+          <li><a href="#" class="user-navigation__item user-navigation__item--orders">Мои заказы</a></li>
+          <li><a href="#" class="user-navigation__item user-navigation__item--profile">Личный кабинет</a></li>
         </ul>
         <nav class="main-nav">
           <ul class="main-nav__list">
@@ -43,13 +43,14 @@
           </ul>
         </nav>
       </div>
-    </header>
-    <main>
+    </header class="page-header">
+    <main class="wrapper">
+      <h1 class="page-title">Перфораторы</h1>
         <section class="inner-navigation">
-            <h1>Перфораторы</h1>
+          <h2 class="visually-hidden">Навигация по каталогу</h2>
             <ul class="breadcrumbs">
                 <li class="breadcrumbs__item">
-                    <a href="./index.html">Главная</a>
+                    <a href="./index.html"><span class="visually-hidden">Главная</span></a>
                 </li>
                 <li class="breadcrumbs__item">
                     <a href="./catalog.html">Каталог</a>
@@ -69,9 +70,9 @@
               <legend>Цена:</legend>
               <!-- Подключить https://refreshless.com/nouislider/ -->
               <div id="slider"></div>
-              <input type="text" name="min-price" id="min-price" value="0">
+              <input type="number" name="min-price" id="min-price" value="0" min="0">
               <span>–</span>
-              <input type="text" name="max-price" id="max-price" value="30000">
+              <input type="number" name="max-price" id="max-price" value="30000" min="0">
             </fieldset>
             <fieldset>
               <legend>Производители:</legend>
@@ -116,11 +117,11 @@
             <fieldset>
               <legend>Питание:</legend>
               <ul>
-                <li><span></span><label><input type="radio" name="power-supply" value="battery">Аккумуляторные</label></li>
-                <li><span></span><label><input type="radio" name="power-supply" value="ac-supply">Сетевые</label></li>
+                <li><span class="custom-radio-button"></span><label><input type="radio" name="power-supply" value="battery">Аккумуляторные</label></li>
+                <li><span class="custom-radio-button"></span><label><input type="radio" name="power-supply" value="ac-supply">Сетевые</label></li>
               </ul>
             </fieldset>
-            <button type="submit">Показать</button>
+            <button class="button" type="submit">Показать</button>
           </form>
         </section>
 			  <section class="sorting-block">
@@ -134,7 +135,7 @@
 					</ul>
         </section>
         <section class="product-list">
-          <h2>Список товаров</h2>
+          <h2 class="visually-hidden">Список товаров</h2>
           <ul>
             <li class="product-list__item">
               <a href="#">
@@ -142,8 +143,8 @@
                 <img src="img/bfg-3000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
               </a>
                 <p>
-                  22 500 Р.
-                  <span>15 500 Р.</span>
+                  <span class="old-price">22 500 Р.</span>
+                  <span class="button button--buy">15 500 Р.</span>
                 </p>
             </li>
             <li class="product-list__item">
@@ -152,8 +153,8 @@
                 <img src="img/bfg-6000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
               </a>
                 <p>
-                  30 500 Р.
-                  <span>25 500 Р.</span>
+                  <span class="old-price">30 500 Р.</span>
+                  <span class="button button--buy">25 500 Р.</span>
                 </p>
             </li>
             <li class="product-list__item">
@@ -174,8 +175,8 @@
                 <img src="img/bfg-3000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
               </a>
                 <p>
-                  22 500 Р.
-                  <span>15 500 Р.</span>
+                  <span class="old-price">22 500 Р.</span>
+                  <span class="button button--buy">15 500 Р.</span>
                 </p>
             </li>
             <li class="product-list__item">
@@ -184,8 +185,8 @@
                 <img src="img/bfg-6000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
               </a>
                 <p>
-                  30 500 Р.
-                  <span>25 500 Р.</span>
+                  <span class="old-price">30 500 Р.</span>
+                  <span class="button button--buy">25 500 Р.</span>
                 </p>
                 <span class="new"></span>
             </li>
@@ -205,8 +206,8 @@
                 <img src="img/bfg-3000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
               </a>
                 <p>
-                  22 500 Р.
-                  <span>15 500 Р.</span>
+                  <span class="old-price">22 500 Р.</span>
+                  <span class="button button--buy">15 500 Р.</span>
                 </p>
                 <span class="new"></span>
             </li>
@@ -216,8 +217,8 @@
                 <img src="img/bfg-6000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
               </a>
                 <p>
-                  30 500 Р.
-                  <span>25 500 Р.</span>
+                  <span class="old-price">30 500 Р.</span>
+                  <span class="button button--buy">25 500 Р.</span>
                 </p>
             </li>
             <li class="product-list__item">
@@ -227,7 +228,7 @@
               </a>
                 <p>
 
-                  <span>12 500 Р.</span>
+                  <span class="button button--buy">12 500 Р.</span>
                 </p>
             </li>
           </ul>
@@ -249,7 +250,7 @@
     </main>
     <footer class="main-footer">
       <div>
-        <a><img src="img/logo.svg" alt="Логотип Интернет-магазина Техномарт" width="138" height="23"></a>
+        <a class="technomart-logo"><img src="img/logo.svg" alt="Логотип Интернет-магазина Техномарт" width="138" height="23"></a>
         <address>
           <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           <span class="visually-hidden">Наш телефон:</span><a href="tel:78125550555">+7 (812) 555-05-55</a>
