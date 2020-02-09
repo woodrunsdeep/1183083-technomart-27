@@ -1,0 +1,463 @@
+/* Шрифтовые стили крупных блоков */
+
+.page {
+  font-style: normal;
+  font-family: "Cuprum", Arial, sans-serif;
+}
+
+.page a,
+.page address {
+  font-style: normal;
+  text-decoration: none;
+}
+
+.services p,
+.about-us p,
+.contact p {
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PT Sans", Arial, sans-serif;
+}
+
+/* Стили заголовков */
+
+.page h2,
+.page__title {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.page__title {
+  color: #32425c;
+
+  background-color: #f2f6f8;
+}
+
+.page h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: "PT Sans", Arial, sans-serif;
+  color: #000000;
+}
+
+/* Хэдер */
+
+.page__header {
+  font-size: 17px;
+
+  background-color: #f4f7f9;
+}
+
+.page__header .wrapper-top,
+.page__footer .wrapper-bottom {
+  color: #ffffff;
+
+  background-color: #293449;
+}
+
+.wrapper-top a {
+  color: #ffffff;
+}
+
+/* Лого */
+
+.technomart-logo {
+  width: 220px;
+
+  background-color: #ee3643;
+}
+
+.technomart-logo:hover {
+  background-color: #ca2c37;
+}
+
+.technomart-logo:active {
+  background-color: #ba2732;
+}
+
+/* Форма поиска */
+
+.search {
+  background-color: #293449;
+  border: none;
+}
+
+.search:hover {
+  background-color: #212a3a;
+}
+
+.search:focus,
+.search:not(:placeholder-shown) {
+  background-color: #ffffff;
+}
+
+.search::placeholder {
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;
+
+  opacity: 1;
+}
+
+/* Пользовательские кнопки */
+
+.user-button:hover,
+.user-button:focus {
+  background-color: #212a3a;
+}
+
+.user-button:active {
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: #161d29;
+}
+
+.checkout {
+  background-color: #63a63e;
+}
+
+.checkout:hover,
+.checkout:focus {
+  background-color: #5fbb2d;
+}
+
+.checkout:active {
+  color: rgba(255, 255, 255, 0.5);
+
+  background-color: #518534;
+}
+
+.page__header .description {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+  color: #ee3643;
+}
+
+.page__header .phone {
+  font-size: 21px;
+  line-height: 21px;
+  color: #ee3643;
+}
+
+.page__header .address {
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425c;
+}
+
+/* Пользовательская навигация */
+
+.user-navigation {
+  list-style: none;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.user-navigation__item {
+  background-color: #ffffff;
+}
+
+.user-navigation__item a {
+  color: #000000;
+}
+
+.user-navigation__item a:hover,
+.user-navigation__item a:focus {
+  color: #ee3643;
+}
+
+.user-navigation__item a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.icon--logout {
+  fill: #c5c5c5;
+}
+
+.icon--logout:hover,
+a:focus .icon--logout {
+  fill: #32425c;
+}
+
+.icon--logout:active,
+a:focus .icon--logout:active {
+  fill: #c5c5c5;
+}
+
+.my-orders a,
+.my-profile a {
+  font-size: 16px;
+  line-height: 18px;
+  color: #32425c;
+  text-decoration: underline;
+}
+
+.my-orders a:active,
+.my-profile a:active {
+  color: rgba(50, 66, 92, 0.3);
+}
+
+.logged-user:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* Главная навигация */
+
+.main-nav__list {
+  list-style: none;
+
+  background-color: #32425c;
+}
+
+.main-nav a {
+  color: #ffffff;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  background-color: #293449;
+}
+
+.main-nav a:active {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.companies-list {
+  list-style: none;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.button {
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: #ee3643;
+}
+
+/* Main */
+
+.page fieldset {
+  border: none;
+}
+
+.filter__form legend {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  font-family: "PT Sans", Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.brands-list__item,
+.supply-type li {
+  font-size: 15px;
+  line-height: 20px;
+  font-family: "PT Sans", Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.product-list__item {
+  border: solid 1px #e5e5e5;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.price--old {
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.price--new {
+  color: #ffffff;
+
+  background-color: #ee3643;
+}
+
+.bookmark {
+  color: #32425c;
+
+  background-color: #ffffff;
+  border: 3px solid #63a63e;
+}
+
+.to-cart {
+  color: #ffffff;
+
+  background-color: #63a63e;
+  border: none;
+  box-shadow: inset 0 -3px 0 0 #367315;
+}
+
+.filter__form .button-filter {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "PT Sans", Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+/* Хлебные крошки */
+
+.breadcrumbs {
+  list-style: none;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "PT Sans", Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.breadcrumbs a {
+  color: #000000;
+}
+
+/* Футер */
+
+.page__footer {
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+
+  background-color: #32425c;
+}
+
+.page__footer p {
+  margin: 0;
+  padding: 0;
+}
+
+.page__footer .address,
+.page__footer .phone {
+  margin: 0;
+  padding: 0;
+
+  line-height: 24px;
+  color: #f3f7f9;
+}
+
+.secondary-nav,
+.secondary-nav ul {
+  display: flex;
+  flex-direction: column;
+
+  list-style: none;
+}
+
+.secondary-nav ul {
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.not-empty {
+  background-color: #ee3643;
+}
+
+.secondary-nav__item {
+  margin-bottom: 45px;
+  margin-left: 60px;;
+}
+
+.secondary-nav a {
+  font-size: 18px;
+  line-height: 24px;
+  color: #f1f5f7;
+}
+
+.secondary-nav a:active {
+  color: rgba(241, 245, 247, 0.5);
+}
+
+.secondary-nav__second-line a {
+  color: #ffd180;
+}
+
+.secondary-nav__second-line a:active {
+  color: rgba(255, 209, 128, 0.5);
+}
+
+/* Кнопки соц. сетей */
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  width: 135px;
+
+  list-style: none;
+}
+
+.social-links__item {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+
+  background-color: #212a3a;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.vk {
+  background-image: url("/img/icon-vk.svg");
+}
+
+.fb {
+  background-image: url("/img/icon-fb.svg");
+}
+
+.ig {
+  background-image: url("/img/icon-inst.svg");
+}
+
+.social-links__item:hover,
+.social-links__item:focus {
+  background-color: #ee3643;
+}
+
+.feedback a,
+.made-by a {
+  color: #ffd180;
+}
+
+.feedback a:active,
+.made-by a:active {
+  color: #ee3643;
+}
+
+.page__footer a:hover,
+.page__footer a:focus {
+  text-decoration: underline;
+}
+
+.page__footer a:active {
+  text-decoration: none;
+}
+
+/* Скрывает доступно */
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/*  Временно скрыто */
+
+.modal-windows {
+  display: none;
+}
