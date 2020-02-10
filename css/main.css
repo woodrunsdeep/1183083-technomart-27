@@ -406,15 +406,15 @@ a:focus .icon--logout:active {
 }
 
 .vk {
-  background-image: url("/img/icon-vk.svg");
+  background-image: url("../img/icon-vk.svg");
 }
 
 .fb {
-  background-image: url("/img/icon-fb.svg");
+  background-image: url("../img/icon-fb.svg");
 }
 
 .ig {
-  background-image: url("/img/icon-inst.svg");
+  background-image: url("../img/icon-inst.svg");
 }
 
 .social-links__item:hover,
