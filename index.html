@@ -3,44 +3,85 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт: Главная</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body class="page">
-    <header class="page__header">
-      <div class="wrapper wrapper-top">
-        <a class="technomart-logo"><img src="img/logo.svg" width="109" height="19" alt="Интернет-магазин Техномарт"></a>
-        <form class="search-form" action="https://echo.htmlacademy.ru" method="POST">
-          <label class="visually-hidden" for="site-search">Поиск</label>
-          <input class="search" type="search" id="site-search" placeholder="Поиск:" name="query">
+  <body>
+    <header class="header">
+      <div class="header__top">
+       
+        <div class="wrapper wrapper--row">
+
+        <div class="header__logo">
+              <a class="logo">
+                <img class="logo__image" src="img/logo.svg" width="109" height="19" alt="Интернет-магазин Техномарт">
+              </a>
+        </div>
+
+        <form class="header__search search-form" action="https://echo.htmlacademy.ru" method="POST">
+          <label class="search-form__label visually-hidden" for="search-form">Поиск</label>
+          <input class="search-form__input" type="search" id="search-form" placeholder="Поиск:" name="query">
+          <button class="search-form__button visually-hidden" type="submit">Найти</button>
         </form>
-        <a class="user-button bookmarks" href="./bookmarks.html">Закладки: 0</a>
-        <a class="user-button cart" href="./cart.html">Корзина: 0</a>
-        <a class="user-button checkout" href="./checkout.html">Оформить заказ</a>
-      </div>
-      <div class="wrapper">
-        <p class="description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
-        <address>
-          <a class="phone" href="tel:78125550555">+7 (812) 555-05-55</a>
-          <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        </address>
+
         <ul class="user-navigation">
-          <li class="user-navigation__item"><a href="./login.html">Войти</a></li>
-          <li class="user-navigation__item"><a href="./catalog.html">Регистрация</a></li>
+          <li class="user-navigation__item">
+            <a class="user-navigation__button" href="./bookmarks.html">Закладки: 0</a>
+          </li>
+          <li class="user-navigation__item">
+            <a class="user-navigation__button" href="./cart.html">Корзина: 0</a>
+          </li>
+          <li class="user-navigation__item">
+            <a class="user-navigation__button user-navigation__button--checkout" href="./checkout.html">Оформить заказ</a>
+          </li>
         </ul>
-        <nav class="main-nav">
+
+        </div>
+      </div>
+      
+      <div class="wrapper">
+        <div class="header__middle">
+          
+          <p class="header__site-description">Интернет-магазин строительных материалов<br> и инструментов для ремонта</p>
+          
+          <ul class="header__contacts">
+            <li class="header__contacts-item header__contacts-item--box">
+              <a class="header__phone" href="tel:78125550555">+7 (812) 555-05-55</a>
+            </li>
+            <li class="header__contacts-item header__address">
+              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            </li>
+          </ul>
+
+          <ul class="profile-navigation">
+            <li class="profile-navigation__item">
+              <a class="profile-navigation__button" href="./login.html">
+                <svg class="login-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="17">
+                  <path d="M14.875 8.5L6 0v6H0v5h6v6z"/>
+                  <path d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"/>
+                </svg>
+                Войти
+              </a>
+            </li>
+            <li class="profile-navigation__item">
+              <a class="profile-navigation__button profile-navigation__sign-up-button" href="./sign-up.html">Регистрация</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+        <nav class="main-nav wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__item"><a>Главная</a></li>
-            <li class="main-nav__item"><a href="./about-us.html">Компания</a></li>
-            <li class="main-nav__item"><a href="./catalog.html">Каталог</a></li>
-            <li class="main-nav__item"><a href="./news.html">Новости</a></li>
-            <li class="main-nav__item"><a href="./speacial-deals.html">Спецпредложения</a></li>
-            <li class="main-nav__item"><a href="./delivery.html">Доставка</a></li>
-            <li class="main-nav__item"><a href="./contact.html">Контакты</a></li>
+            <li class="main-nav__item"><a class="main-nav__link">Главная</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="./about-us.html">Компания</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="./catalog.html">Каталог</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="./news.html">Новости</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="./speacial-deals.html">Спецпредложения</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="./delivery.html">Доставка</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="./contact.html">Контакты</a></li>
           </ul>
         </nav>
-      </div>
     </header>
     <main class="page__main">
       <h1 class="visually-hidden">Интернет-магазин Техномарт</h1>
