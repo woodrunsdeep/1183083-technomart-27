@@ -88,208 +88,212 @@
           </ul>
         </nav>
     </header>
-    <main class="main wrapper">
-      <h1 class="page__title">Перфораторы</h1>
-        <section class="inner-navigation">
-          <h2 class="visually-hidden">Навигация по каталогу</h2>
-            <ul class="breadcrumbs">
-                <li class="breadcrumbs__item">
-                    <a href="./index.html"><span class="visually-hidden">Главная</span></a>
-                </li>
-                <li class="breadcrumbs__item">
-                    <a href="./catalog.html">Каталог</a>
-                </li>
-                <li class="breadcrumbs__item">
-                    <a href="./tools.html">Инструменты</a>
-                </li>
-                <li class="breadcrumbs__item">
-                    <a>Перфораторы</a>
-                </li>
+    <main class="main">
+      <div class="wrapper">
+        <h1 class="page-title">Перфораторы</h1>
+          <section class="inner-navigation">
+            <h2 class="visually-hidden">Навигация по каталогу</h2>
+              <ul class="breadcrumbs">
+                  <li class="breadcrumbs__item">
+                      <a href="./index.html"><span class="visually-hidden">Главная</span></a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                      <a href="./catalog.html">Каталог</a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                      <a href="./tools.html">Инструменты</a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                      <a>Перфораторы</a>
+                  </li>
+              </ul>
+          </section>
+          <section class="filter">
+            <h2>Фильтр:</h2>
+            <form class="filter__form" action="https://echo.htmlacademy.ru" method="POST">
+              <fieldset class="form__group">
+                <legend>Цена:</legend>
+                <!-- Подключить https://refreshless.com/nouislider/ -->
+                <div id="slider"></div>
+                <input type="number" name="min-price" id="min-price" value="0" min="0">
+                <span>–</span>
+                <input type="number" name="max-price" id="max-price" value="30000" min="0">
+              </fieldset>
+              <fieldset class="form__group">
+                <legend>Производители:</legend>
+                <ul class="brands-list">
+                  <li class="brands-list__item">
+                    <span class="custom-checkbox"></span>
+                    <label>
+                      <input type="checkbox" name="brand"  value="Bosch" checked>
+                      Bosch
+                    </label>
+                  </li>
+                  <li class="brands-list__item">
+                    <span class="custom-checkbox"></span>
+                    <label>
+                      <input type="checkbox" name="brand"  value="Interskol">
+                      Интерскол
+                    </label>
+                  </li>
+                  <li class="brands-list__item">
+                    <span class="custom-checkbox"></span>
+                    <label>
+                      <input type="checkbox" name="brand"  value="Makita" checked>
+                      Makita
+                    </label>
+                  </li>
+                  <li class="brands-list__item">
+                    <span class="custom-checkbox"></span>
+                    <label>
+                      <input type="checkbox" name="brand"  value="Dewalt">
+                      Dewalt
+                    </label>
+                  </li>
+                  <li class="brands-list__item">
+                    <span class="custom-checkbox"></span>
+                    <label>
+                      <input type="checkbox" name="brand"  value="Hitachi">
+                      Hitachi
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="form__group">
+                <legend>Питание:</legend>
+                <ul class="supply-type">
+                  <li><span class="custom-radio-button"></span><label><input type="radio" name="power-supply" value="battery" checked>Аккумуляторные</label></li>
+                  <li><span class="custom-radio-button"></span><label><input type="radio" name="power-supply" value="ac-supply">Сетевые</label></li>
+                </ul>
+              </fieldset>
+              <button class="button-filter" type="submit">Показать</button>
+            </form>
+          </section>
+          <section class="sorting-block">
+            <h2>Сортировка:</h2>
+            <ul class="sorting-property__list">
+              <li class="sorting-property__item"><a href="#">По цене</a></li>
+              <li class="sorting-property__item"><a href="#">По типу</a></li>
+              <li class="sorting-property__item"><a href="#">По функционалу</a></li>
+              <li class="sorting-property__item--order-ascending"><a href="#"></a></li>
+              <li class="sorting-property__item--order-descending"><a href="#"></a></li>
             </ul>
-        </section>
-        <section class="filter">
-          <h2>Фильтр:</h2>
-          <form class="filter__form" action="https://echo.htmlacademy.ru" method="POST">
-            <fieldset class="form__group">
-              <legend>Цена:</legend>
-              <!-- Подключить https://refreshless.com/nouislider/ -->
-              <div id="slider"></div>
-              <input type="number" name="min-price" id="min-price" value="0" min="0">
-              <span>–</span>
-              <input type="number" name="max-price" id="max-price" value="30000" min="0">
-            </fieldset>
-            <fieldset class="form__group">
-              <legend>Производители:</legend>
-              <ul class="brands-list">
-                <li class="brands-list__item">
-                  <span class="custom-checkbox"></span>
-                  <label>
-                    <input type="checkbox" name="brand"  value="Bosch" checked>
-                    Bosch
-                  </label>
-                </li>
-                <li class="brands-list__item">
-                  <span class="custom-checkbox"></span>
-                  <label>
-                    <input type="checkbox" name="brand"  value="Interskol">
-                    Интерскол
-                  </label>
-                </li>
-                <li class="brands-list__item">
-                  <span class="custom-checkbox"></span>
-                  <label>
-                    <input type="checkbox" name="brand"  value="Makita" checked>
-                    Makita
-                  </label>
-                </li>
-                <li class="brands-list__item">
-                  <span class="custom-checkbox"></span>
-                  <label>
-                    <input type="checkbox" name="brand"  value="Dewalt">
-                    Dewalt
-                  </label>
-                </li>
-                <li class="brands-list__item">
-                  <span class="custom-checkbox"></span>
-                  <label>
-                    <input type="checkbox" name="brand"  value="Hitachi">
-                    Hitachi
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="form__group">
-              <legend>Питание:</legend>
-              <ul class="supply-type">
-                <li><span class="custom-radio-button"></span><label><input type="radio" name="power-supply" value="battery" checked>Аккумуляторные</label></li>
-                <li><span class="custom-radio-button"></span><label><input type="radio" name="power-supply" value="ac-supply">Сетевые</label></li>
-              </ul>
-            </fieldset>
-            <button class="button-filter" type="submit">Показать</button>
-          </form>
-        </section>
-			  <section class="sorting-block">
-					<h2>Сортировка:</h2>
-					<ul class="sorting-property__list">
-						<li class="sorting-property__item"><a href="#">По цене</a></li>
-						<li class="sorting-property__item"><a href="#">По типу</a></li>
-						<li class="sorting-property__item"><a href="#">По функционалу</a></li>
-						<li class="sorting-property__item--order-ascending"><a href="#"></a></li>
-						<li class="sorting-property__item--order-descending"><a href="#"></a></li>
-					</ul>
-        </section>
-        <section class="product-list">
-          <h2 class="visually-hidden">Список товаров</h2>
-          <ul>
-            <li class="product-list__item">
-              <a href="#">
-                <h3>Перфоратор BOSCH BFG 3000</h3>
-                <img src="img/bfg-3000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
-              </a>
-                <p>
-                  <span class="price price--old">22500 Р.</span>
-                  <span class="price price--new">15500 Р.</span>
-                </p>
-            </li>
-            <li class="product-list__item">
-              <a href="#">
-                <h3>Перфоратор BOSCH BFG 6000</h3>
-                <img src="img/bfg-6000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
-              </a>
-                <p>
-                  <span class="price price--old">30500 Р.</span>
-                  <span class="price price--new">25500 Р.</span>
-                </p>
-            </li>
-            <li class="product-list__item">
-              <a href="#">
-                <h3>Перфоратор BOSCH BFG 2000</h3>
-              </a>
-                <button class="to-cart" type="button">Купить</button>
-                <button class="bookmark" type="button">В закладки</button>
-                <p>
+          </section>
+          <section class="product-list">
+            <h2 class="visually-hidden">Список товаров</h2>
+            <ul>
+              <li class="product-list__item">
+                <a href="#">
+                  <h3>Перфоратор BOSCH BFG 3000</h3>
+                  <img src="img/bfg-3000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
+                </a>
+                  <p>
+                    <span class="price price--old">22500 Р.</span>
+                    <span class="price price--new">15500 Р.</span>
+                  </p>
+              </li>
+              <li class="product-list__item">
+                <a href="#">
+                  <h3>Перфоратор BOSCH BFG 6000</h3>
+                  <img src="img/bfg-6000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
+                </a>
+                  <p>
+                    <span class="price price--old">30500 Р.</span>
+                    <span class="price price--new">25500 Р.</span>
+                  </p>
+              </li>
+              <li class="product-list__item">
+                <a href="#">
+                  <h3>Перфоратор BOSCH BFG 2000</h3>
+                </a>
+                  <button class="to-cart" type="button">Купить</button>
+                  <button class="bookmark" type="button">В закладки</button>
+                  <p>
 
-                  <span class="price price--new">12500 Р.</span>
-                </p>
-                <span class="new"></span>
-            </li>
-            <li class="product-list__item">
-              <a href="#">
-                <h3>Перфоратор BOSCH BFG 3000</h3>
-                <img src="img/bfg-3000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
-              </a>
-                <p>
-                  <span class="price price--old">22500 Р.</span>
-                  <span class="price price--new">15500 Р.</span>
-                </p>
-            </li>
-            <li class="product-list__item">
-              <a href="#">
-                <h3>Перфоратор BOSCH BFG 6000</h3>
-                <img src="img/bfg-6000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
-              </a>
-                <p>
-                  <span class="price price--old">30500 Р.</span>
-                  <span class="price price--new">25500 Р.</span>
-                </p>
-                <span class="new"></span>
-            </li>
-            <li class="product-list__item">
-              <a href="#">
-                <h3>Перфоратор BOSCH BFG 2000</h3>
-                <img src="img/bfg-2000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
-              </a>
-                <p>
+                    <span class="price price--new">12500 Р.</span>
+                  </p>
+                  <span class="new"></span>
+              </li>
+              <li class="product-list__item">
+                <a href="#">
+                  <h3>Перфоратор BOSCH BFG 3000</h3>
+                  <img src="img/bfg-3000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
+                </a>
+                  <p>
+                    <span class="price price--old">22500 Р.</span>
+                    <span class="price price--new">15500 Р.</span>
+                  </p>
+              </li>
+              <li class="product-list__item">
+                <a href="#">
+                  <h3>Перфоратор BOSCH BFG 6000</h3>
+                  <img src="img/bfg-6000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
+                </a>
+                  <p>
+                    <span class="price price--old">30500 Р.</span>
+                    <span class="price price--new">25500 Р.</span>
+                  </p>
+                  <span class="new"></span>
+              </li>
+              <li class="product-list__item">
+                <a href="#">
+                  <h3>Перфоратор BOSCH BFG 2000</h3>
+                  <img src="img/bfg-2000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
+                </a>
+                  <p>
 
-                  <span class="price price--new">12500 Р.</span>
-                </p>
-            </li>
-            <li class="product-list__item">
-              <a href="#">
-                <h3>Перфоратор BOSCH BFG 3000</h3>
-                <img src="img/bfg-3000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
-              </a>
-                <p>
-                  <span class="price price--old">22500 Р.</span>
-                  <span class="price price--new">15500 Р.</span>
-                </p>
-                <span class="new"></span>
-            </li>
-            <li class="product-list__item">
-              <a href="#">
-                <h3>Перфоратор BOSCH BFG 6000</h3>
-                <img src="img/bfg-6000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
-              </a>
-                <p>
-                  <span class="price price--old">30500 Р.</span>
-                  <span class="price price--new">25500 Р.</span>
-                </p>
-            </li>
-            <li class="product-list__item">
-              <a href="#">
-                <h3>Перфоратор BOSCH BFG 2000</h3>
-                <img src="img/bfg-2000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
-              </a>
-                <p>
+                    <span class="price price--new">12500 Р.</span>
+                  </p>
+              </li>
+              <li class="product-list__item">
+                <a href="#">
+                  <h3>Перфоратор BOSCH BFG 3000</h3>
+                  <img src="img/bfg-3000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
+                </a>
+                  <p>
+                    <span class="price price--old">22500 Р.</span>
+                    <span class="price price--new">15500 Р.</span>
+                  </p>
+                  <span class="new"></span>
+              </li>
+              <li class="product-list__item">
+                <a href="#">
+                  <h3>Перфоратор BOSCH BFG 6000</h3>
+                  <img src="img/bfg-6000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
+                </a>
+                  <p>
+                    <span class="price price--old">30500 Р.</span>
+                    <span class="price price--new">25500 Р.</span>
+                  </p>
+              </li>
+              <li class="product-list__item">
+                <a href="#">
+                  <h3>Перфоратор BOSCH BFG 2000</h3>
+                  <img src="img/bfg-2000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
+                </a>
+                  <p>
 
-                  <span class="price price--new">12500 Р.</span>
-                </p>
-            </li>
+                    <span class="price price--new">12500 Р.</span>
+                  </p>
+              </li>
+            </ul>
+          </section>
+          <ul class="pagination-list">
+            <li class="pagination-list__item pagination-list__item--current-page"><a>1</a></li>
+            <li class="pagination-list__item"><a href="#">2</a></li>
+            <li class="pagination-list__item"><a href="#">3</a></li>
+            <li class="pagination-list__item pagination-list__item--next-page"><a href="#">Следующая</a></li>
           </ul>
-        </section>
-        <ul class="pagination-list">
-          <li class="pagination-list__item pagination-list__item--current-page"><a>1</a></li>
-          <li class="pagination-list__item"><a href="#">2</a></li>
-          <li class="pagination-list__item"><a href="#">3</a></li>
-          <li class="pagination-list__item pagination-list__item--next-page"><a href="#">Следующая</a></li>
-        </ul>
+        </div>
         <section class="about-product">
-            <h2>Пара слов о перфораторах</h2>
-            <p>
+          <div class="about-product__wrapper">
+            <h2 class="section__title">Пара слов о перфораторах</h2>
+            <p class="about-product__paragraph">
               Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
               Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br>
               В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
             </p>
+          </div>
         </section>
     </main>
     <footer class="footer">
