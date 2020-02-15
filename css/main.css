@@ -572,82 +572,169 @@ h2,
 
 /* Футер */
 
-.page__footer {
-  font-size: 16px;
-  line-height: 18px;
+.footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
   color: #ffffff;
 
   background-color: #32425c;
 }
 
-.page__footer p {
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 940px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.footer__wrapper--bottom {
+  box-sizing: border-box;
+  margin-bottom: 0;
+  padding-right: 15px;
+  padding-left: 1px;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  min-width: 284px;
   margin: 0;
   padding: 0;
 }
 
-.page__footer .address,
-.page__footer .phone {
-  margin: 0;
-  padding: 0;
-
-  line-height: 24px;
-  color: #f3f7f9;
-}
-
-.secondary-nav,
-.secondary-nav ul {
+.footer__feedback {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  padding-right: 53px;
+}
+
+.footer__developed-by {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__contacts {
+  margin: 0;
+  padding: 0;
+  padding-left: 3px;
+
+  list-style: none;
+  font-style: normal;
+  line-height: 24px;
+}
+
+.footer__bottom {
+  padding-top: 35px;
+  padding-bottom: 30px;
+
+  font-size: 16px;
+  line-height: 18px;
+
+  background-color: #293449;
+}
+
+.footer__logo {
+  width: 220px;
+  height: 63px;
+  margin-bottom: 32px;
+}
+
+.footer__address {
+  margin: 0;
+  padding: 0;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
 
   list-style: none;
 }
 
-.secondary-nav ul {
-  flex-direction: row;
+.footer__nav-row {
+  margin: 0;
+  padding: 0;
+}
+
+.footer__nav-list {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
+  padding: 0;
 }
 
-.not-empty {
-  background-color: #ee3643;
+.footer__nav-item {
+  margin-top: 17px;
+  margin-bottom: 17px;
+  margin-left: 60px;
+
+  list-style: none;
 }
 
-.secondary-nav__item {
-  margin-bottom: 45px;
-  margin-left: 60px;;
-}
-
-.secondary-nav a {
+.footer__nav-link {
   font-size: 18px;
   line-height: 24px;
   color: #f1f5f7;
 }
 
-.secondary-nav a:active {
-  color: rgba(241, 245, 247, 0.5);
+.footer__nav-link:hover,
+.footer__nav-link:focus {
+  text-decoration: underline;
 }
 
-.secondary-nav__second-line a {
+.footer__nav-link:active {
+  color: rgba(241, 245, 247, 0.5);
+  text-decoration: none;
+}
+
+.footer__nav-link--colored {
   color: #ffd180;
 }
 
-.secondary-nav__second-line a:active {
+.footer__nav-link--colored:active {
   color: rgba(255, 209, 128, 0.5);
 }
 
-/* Кнопки соц. сетей */
-
-.social-links {
+.socials {
   display: flex;
-  justify-content: space-between;
-  width: 135px;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* box-sizing: border-box; */
+  min-width: 132px;
+  margin: 0;
+  padding: 0;
+  /* padding-right: 3px; */
 
   list-style: none;
 }
 
-.social-links__item {
+.socials__item {
+  margin: 0;
+  margin-right: 3px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.socials__link {
   display: inline-block;
   width: 42px;
   height: 42px;
+
+  vertical-align: middle;
 
   background-color: #212a3a;
   background-repeat: no-repeat;
@@ -655,39 +742,38 @@ h2,
   border-radius: 50%;
 }
 
-.vk {
-  background-image: url("../img/icon-vk.svg");
+.socials__link--vk {
+  background-image: url("/img/icon-vk.svg");
 }
 
-.fb {
-  background-image: url("../img/icon-fb.svg");
+.socials__link--fb {
+  background-image: url("/img/icon-fb.svg");
 }
 
-.ig {
-  background-image: url("../img/icon-inst.svg");
+.socials__link--ig {
+  background-image: url("/img/icon-inst.svg");
 }
 
-.social-links__item:hover,
-.social-links__item:focus {
+.socials__link:hover,
+.socials__link:focus {
   background-color: #ee3643;
 }
 
-.feedback a,
-.made-by a {
+.feedback__link,
+.feedback__copyright-link {
   color: #ffd180;
 }
 
-.feedback a:active,
-.made-by a:active {
-  color: #ee3643;
-}
-
-.page__footer a:hover,
-.page__footer a:focus {
+.feedback__link:hover,
+.feedback__copyright-link:hover,
+.feedback__link:focus,
+.feedback__copyright-link:focus {
   text-decoration: underline;
 }
 
-.page__footer a:active {
+.feedback__copyright-link:active,
+.feedback__link:active {
+  color: #ee3643;
   text-decoration: none;
 }
 
