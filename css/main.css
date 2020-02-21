@@ -1265,15 +1265,15 @@ h3 {
 }
 
 .socials__link--vk {
-  background-image: url("/img/icon-vk.svg");
+  background-image: url("../img/icon-vk.svg");
 }
 
 .socials__link--fb {
-  background-image: url("/img/icon-fb.svg");
+  background-image: url("../img/icon-fb.svg");
 }
 
 .socials__link--ig {
-  background-image: url("/img/icon-inst.svg");
+  background-image: url("../img/icon-inst.svg");
 }
 
 .socials__link:hover,
