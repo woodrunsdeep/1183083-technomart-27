@@ -78,36 +78,55 @@
       </div>
         <nav class="main-nav wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__item"><a class="main-nav__link" href="./index.html">Главная</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="./about-us.html">Компания</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="./catalog.html">Каталог</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="./news.html">Новости</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="./speacial-deals.html">Спецпредложения</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="./delivery.html">Доставка</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="./contact.html">Контакты</a></li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="./index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="./about-us.html">Компания</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="./catalog.html">Каталог</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="./news.html">Новости</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="./speacial-deals.html">Спецпредложения
+              </a></li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="./delivery.html">Доставка</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="./contact.html">Контакты</a>
+            </li>
           </ul>
         </nav>
     </header>
     <main class="main">
-      <div class="wrapper">
-        <h1 class="page-title">Перфораторы</h1>
-          <section class="inner-navigation">
-            <h2 class="visually-hidden">Навигация по каталогу</h2>
-              <ul class="breadcrumbs">
-                  <li class="breadcrumbs__item">
-                      <a href="./index.html"><span class="visually-hidden">Главная</span></a>
-                  </li>
-                  <li class="breadcrumbs__item">
-                      <a href="./catalog.html">Каталог</a>
-                  </li>
-                  <li class="breadcrumbs__item">
-                      <a href="./tools.html">Инструменты</a>
-                  </li>
-                  <li class="breadcrumbs__item">
-                      <a>Перфораторы</a>
-                  </li>
-              </ul>
-          </section>
+      <div class="main__wrapper">
+        <div class="page-title__backdrop">
+          <h1 class="page-title">Перфораторы</h1>
+        </div>
+        <section class="inner-navigation">
+          <h2 class="visually-hidden">Навигация по каталогу</h2>
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link breadcrumbs__link--home" href="./index.html">
+                      <span class="visually-hidden">Главная</span>
+                    </a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="./catalog.html">Каталог</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="./tools.html">Инструмент</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link">Перфораторы</a>
+                </li>
+            </ul>
+        </section>
+        <div class="catalog-wrapper">
           <section class="filter">
             <h2>Фильтр:</h2>
             <form class="filter__form" action="https://echo.htmlacademy.ru" method="POST">
@@ -169,122 +188,255 @@
               <button class="button-filter" type="submit">Показать</button>
             </form>
           </section>
-          <section class="sorting-block">
-            <h2>Сортировка:</h2>
-            <ul class="sorting-property__list">
-              <li class="sorting-property__item"><a href="#">По цене</a></li>
-              <li class="sorting-property__item"><a href="#">По типу</a></li>
-              <li class="sorting-property__item"><a href="#">По функционалу</a></li>
-              <li class="sorting-property__item--order-ascending"><a href="#"></a></li>
-              <li class="sorting-property__item--order-descending"><a href="#"></a></li>
-            </ul>
-          </section>
-          <section class="product-list">
-            <h2 class="visually-hidden">Список товаров</h2>
-            <ul>
-              <li class="product-list__item">
-                <a href="#">
-                  <h3>Перфоратор BOSCH BFG 3000</h3>
-                  <img src="img/bfg-3000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
-                </a>
-                  <p>
-                    <span class="price price--old">22500 Р.</span>
-                    <span class="price price--new">15500 Р.</span>
-                  </p>
-              </li>
-              <li class="product-list__item">
-                <a href="#">
-                  <h3>Перфоратор BOSCH BFG 6000</h3>
-                  <img src="img/bfg-6000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
-                </a>
-                  <p>
-                    <span class="price price--old">30500 Р.</span>
-                    <span class="price price--new">25500 Р.</span>
-                  </p>
-              </li>
-              <li class="product-list__item">
-                <a href="#">
-                  <h3>Перфоратор BOSCH BFG 2000</h3>
-                </a>
-                  <button class="to-cart" type="button">Купить</button>
-                  <button class="bookmark" type="button">В закладки</button>
-                  <p>
-
-                    <span class="price price--new">12500 Р.</span>
-                  </p>
-                  <span class="new"></span>
-              </li>
-              <li class="product-list__item">
-                <a href="#">
-                  <h3>Перфоратор BOSCH BFG 3000</h3>
-                  <img src="img/bfg-3000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
-                </a>
-                  <p>
-                    <span class="price price--old">22500 Р.</span>
-                    <span class="price price--new">15500 Р.</span>
-                  </p>
-              </li>
-              <li class="product-list__item">
-                <a href="#">
-                  <h3>Перфоратор BOSCH BFG 6000</h3>
-                  <img src="img/bfg-6000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
-                </a>
-                  <p>
-                    <span class="price price--old">30500 Р.</span>
-                    <span class="price price--new">25500 Р.</span>
-                  </p>
-                  <span class="new"></span>
-              </li>
-              <li class="product-list__item">
-                <a href="#">
-                  <h3>Перфоратор BOSCH BFG 2000</h3>
-                  <img src="img/bfg-2000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
-                </a>
-                  <p>
-
-                    <span class="price price--new">12500 Р.</span>
-                  </p>
-              </li>
-              <li class="product-list__item">
-                <a href="#">
-                  <h3>Перфоратор BOSCH BFG 3000</h3>
-                  <img src="img/bfg-3000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
-                </a>
-                  <p>
-                    <span class="price price--old">22500 Р.</span>
-                    <span class="price price--new">15500 Р.</span>
-                  </p>
-                  <span class="new"></span>
-              </li>
-              <li class="product-list__item">
-                <a href="#">
-                  <h3>Перфоратор BOSCH BFG 6000</h3>
-                  <img src="img/bfg-6000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
-                </a>
-                  <p>
-                    <span class="price price--old">30500 Р.</span>
-                    <span class="price price--new">25500 Р.</span>
-                  </p>
-              </li>
-              <li class="product-list__item">
-                <a href="#">
-                  <h3>Перфоратор BOSCH BFG 2000</h3>
-                  <img src="img/bfg-2000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
-                </a>
-                  <p>
-
-                    <span class="price price--new">12500 Р.</span>
-                  </p>
-              </li>
-            </ul>
-          </section>
-          <ul class="pagination-list">
-            <li class="pagination-list__item pagination-list__item--current-page"><a>1</a></li>
-            <li class="pagination-list__item"><a href="#">2</a></li>
-            <li class="pagination-list__item"><a href="#">3</a></li>
-            <li class="pagination-list__item pagination-list__item--next-page"><a href="#">Следующая</a></li>
-          </ul>
+          <div>
+            <section class="sorting">
+              <h2 class="sorting__title">Сортировка:</h2>
+              <ul class="sorting__list">
+                <li class="sorting__item">
+                  <a class="sorting__property" href="#">По цене</a>
+                </li>
+                <li class="sorting__item">
+                  <a class="sorting__property" href="#">По типу</a>
+                </li>
+                <li class="sorting__item">
+                  <a class="sorting__property" href="#">По функционалу</a>
+                </li>
+                <li class="sorting__item">
+                  <a class="sorting__property--order-ascending"href="#">
+                    <svg class="order" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                      <path d="M5.5 0L0 10h11z"/>
+                  </svg>
+                  </a>
+                </li>
+                <li class="sorting__item">
+                  <a class="sorting__property--order-descending"href="#">
+                    <svg class="order order-descending" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                      <path d="M5.5 0L0 10h11z"/>
+                  </svg>
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section class="product-list">
+              <h2 class="visually-hidden">Список товаров</h2>
+              <ul class="products">
+                <li class="products__item">
+                  <article class="product">
+                    <h3 class="product__title">
+                      <a class="product__link" href="#">Перфоратор BOSCH BFG 3000</a>  
+                    </h3>
+                    <img class="product__image" 
+                        src="https://htmlacademy-htmlcss.github.io/1183083-technomart-27/8/img/bfg-3000.jpg" 
+                        width="218"
+                        height="170"
+                        alt="Аккумуляторный перфоратор с патроном SDS plus">
+                    <ul class="product__prices">
+                      <li class="product__price product__price--old">22500 Р.</li>
+                      <li class="product__price product__price--new">
+                        <span class="product__price-tag">15500 Р.</span>
+                      </li>
+                    </ul>
+                    <div class="action-buttons">
+                      <button class="button button--to-cart" type="button">Купить</button>
+                      <button class="button button--bookmark" type="button">В закладки</button>
+                    </div>
+                  </article>
+                </li>
+                <li class="products__item">
+                  <article class="product">
+                    <h3 class="product__title">
+                      <a class="product__link" href="#">Перфоратор BOSCH BFG 6000</a>  
+                    </h3>
+                    <img class="product__image" 
+                        src="https://htmlacademy-htmlcss.github.io/1183083-technomart-27/8/img/bfg-6000.jpg" 
+                        width="218"
+                        height="170"
+                        alt="Аккумуляторный перфоратор с патроном SDS plus">
+                    <ul class="product__prices">
+                      <li class="product__price product__price--old">30500 Р.</li>
+                      <li class="product__price product__price--new">
+                        <span class="product__price-tag">25500 Р.</span>
+                      </li>
+                    </ul>
+                    <div class="action-buttons">
+                      <button class="button button--to-cart" type="button">Купить</button>
+                      <button class="button button--bookmark" type="button">В закладки</button>
+                    </div>
+                  </article>
+                </li>
+                <li class="products__item">
+                <article class="product">
+                    <h3 class="product__title">
+                      <a class="product__link" href="#">Перфоратор BOSCH BFG 2000</a>  
+                    </h3>
+                    <img class="product__image" 
+                        src="https://htmlacademy-htmlcss.github.io/1183083-technomart-27/8/img/bfg-2000.jpg" 
+                        width="218"
+                        height="170"
+                        alt="Аккумуляторный перфоратор с патроном SDS plus">
+                    <ul class="product__prices">
+                      <li class="product__price product__price--new">
+                        <span class="product__price-tag">12500 Р.</span>
+                      </li>
+                    </ul>
+                    <div class="action-buttons">
+                      <button class="button button--to-cart" type="button">Купить</button>
+                      <button class="button button--bookmark" type="button">В закладки</button>
+                    </div>
+                    <span class="tag-new"></span>
+                  </article>
+                </li>
+                <li class="products__item">
+                  <article class="product">
+                    <h3 class="product__title">
+                      <a class="product__link" href="#">Перфоратор BOSCH BFG 3000</a>  
+                    </h3>
+                    <img class="product__image" 
+                        src="https://htmlacademy-htmlcss.github.io/1183083-technomart-27/8/img/bfg-3000.jpg" 
+                        width="218"
+                        height="170"
+                        alt="Аккумуляторный перфоратор с патроном SDS plus">
+                    <ul class="product__prices">
+                      <li class="product__price product__price--old">22500 Р.</li>
+                      <li class="product__price product__price--new">
+                        <span class="product__price-tag">15500 Р.</span>
+                      </li>
+                    </ul>
+                    <div class="action-buttons">
+                      <button class="button button--to-cart" type="button">Купить</button>
+                      <button class="button button--bookmark" type="button">В закладки</button>
+                    </div>
+                  </article>
+                </li>
+                <li class="products__item">
+                  <article class="product">
+                    <h3 class="product__title">
+                      <a class="product__link" href="#">Перфоратор BOSCH BFG 6000</a>  
+                    </h3>
+                    <img class="product__image" 
+                        src="https://htmlacademy-htmlcss.github.io/1183083-technomart-27/8/img/bfg-6000.jpg" 
+                        width="218"
+                        height="170"
+                        alt="Аккумуляторный перфоратор с патроном SDS plus">
+                    <ul class="product__prices">
+                      <li class="product__price product__price--old">30500 Р.</li>
+                      <li class="product__price product__price--new">
+                        <span class="product__price-tag">25500 Р.</span>
+                      </li>
+                    </ul>
+                    <div class="action-buttons">
+                      <button class="button button--to-cart" type="button">Купить</button>
+                      <button class="button button--bookmark" type="button">В закладки</button>
+                    </div>
+                    <span class="tag-new"></span>
+                  </article>
+                </li>
+                <li class="products__item">
+                <article class="product">
+                    <h3 class="product__title">
+                      <a class="product__link" href="#">Перфоратор BOSCH BFG 2000</a>  
+                    </h3>
+                    <img class="product__image" 
+                        src="https://htmlacademy-htmlcss.github.io/1183083-technomart-27/8/img/bfg-2000.jpg" 
+                        width="218"
+                        height="170"
+                        alt="Аккумуляторный перфоратор с патроном SDS plus">
+                    <ul class="product__prices">
+                      <li class="product__price product__price--new">
+                        <span class="product__price-tag">12500 Р.</span>
+                      </li>
+                    </ul>
+                    <div class="action-buttons">
+                      <button class="button button--to-cart" type="button">Купить</button>
+                      <button class="button button--bookmark" type="button">В закладки</button>
+                    </div>
+                  </article>
+                </li>
+                  <li class="products__item">
+                  <article class="product">
+                    <h3 class="product__title">
+                      <a class="product__link" href="#">Перфоратор BOSCH BFG 3000</a>  
+                    </h3>
+                    <img class="product__image" 
+                        src="https://htmlacademy-htmlcss.github.io/1183083-technomart-27/8/img/bfg-3000.jpg" 
+                        width="218"
+                        height="170"
+                        alt="Аккумуляторный перфоратор с патроном SDS plus">
+                    <ul class="product__prices">
+                      <li class="product__price product__price--old">22500 Р.</li>
+                      <li class="product__price product__price--new">
+                        <span class="product__price-tag">15500 Р.</span>
+                      </li>
+                    </ul>
+                    <div class="action-buttons">
+                      <button class="button button--to-cart" type="button">Купить</button>
+                      <button class="button button--bookmark" type="button">В закладки</button>
+                    </div>
+                    <span class="tag-new"></span>
+                  </article>
+                </li>
+                <li class="products__item">
+                  <article class="product">
+                    <h3 class="product__title">
+                      <a class="product__link" href="#">Перфоратор BOSCH BFG 6000</a>  
+                    </h3>
+                    <img class="product__image" 
+                        src="https://htmlacademy-htmlcss.github.io/1183083-technomart-27/8/img/bfg-6000.jpg" 
+                        width="218"
+                        height="170"
+                        alt="Аккумуляторный перфоратор с патроном SDS plus">
+                    <ul class="product__prices">
+                      <li class="product__price product__price--old">30500 Р.</li>
+                      <li class="product__price product__price--new">
+                        <span class="product__price-tag">25500 Р.</span>
+                      </li>
+                    </ul>
+                    <div class="action-buttons">
+                      <button class="button button--to-cart" type="button">Купить</button>
+                      <button class="button button--bookmark" type="button">В закладки</button>
+                    </div>
+                  </article>
+                </li>
+                <li class="products__item">
+                <article class="product">
+                    <h3 class="product__title">
+                      <a class="product__link" href="#">Перфоратор BOSCH BFG 2000</a>  
+                    </h3>
+                    <img class="product__image" 
+                        src="https://htmlacademy-htmlcss.github.io/1183083-technomart-27/8/img/bfg-2000.jpg" 
+                        width="218"
+                        height="170"
+                        alt="Аккумуляторный перфоратор с патроном SDS plus">
+                    <ul class="product__prices">
+                      <li class="product__price product__price--new">
+                        <span class="product__price-tag">12500 Р.</span>
+                      </li>
+                    </ul>
+                    <div class="action-buttons">
+                      <button class="button button--to-cart" type="button">Купить</button>
+                      <button class="button button--bookmark" type="button">В закладки</button>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+              <ul class="pagination">
+                <li class="pagination__item">
+                  <a class="pagination__button pagination__button--current">1</a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#" class="pagination__button">2</a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#" class="pagination__button">3</a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#" class="pagination__button pagination__button--next">Следующая</a>
+                </li>
+              </ul>
+            </section>
+          </div>
         </div>
+      </div>
         <section class="about-product">
           <div class="about-product__wrapper">
             <h2 class="section__title">Пара слов о перфораторах</h2>
