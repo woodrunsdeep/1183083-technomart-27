@@ -1596,30 +1596,30 @@ h3 {
   height: 23px;
   margin-left: -34px;
 
-  background-image: url(/img/checkbox-off.svg);
+  background-image: url(./img/checkbox-off.svg);
   background-repeat: no-repeat;
 }
 
 .check__input:checked + .check__box {
-  background-image: url(/img/checkbox-on.svg);
+  background-image: url(./img/checkbox-on.svg);
 }
 
 .check:hover .check__box,
 .check__input:focus + .check__box {
-  background-image: url(/img/checkbox-off--focused.svg);
+  background-image: url(./img/checkbox-off--focused.svg);
 }
 
 .check__input:checked:hover + .check__box,
 .check__input:checked:focus + .check__box {
-  background-image: url(/img/checkbox-on--focused.svg);
+  background-image: url(./img/checkbox-on--focused.svg);
 }
 
 .check__input:disabled + .check__box {
-  background-image: url(/img/checkbox-off--disabled.svg);
+  background-image: url(./img/checkbox-off--disabled.svg);
 }
 
 .check__input:checked:disabled + .check__box {
-  background-image: url(/img/checkbox-on--disabled.svg);
+  background-image: url(./img/checkbox-on--disabled.svg);
 }
 
 .radio {
@@ -1641,30 +1641,30 @@ h3 {
   height: 25px;
   margin-left: -35px;
 
-  background-image: url(/img/radio-off.svg);
+  background-image: url(./img/radio-off.svg);
   background-repeat: no-repeat;
 }
 
 .radio__input:checked + .radio__box {
-  background-image: url(/img/radio-on.svg);
+  background-image: url(./img/radio-on.svg);
 }
 
 .radio:hover .radio__box,
 .radio__input:focus + .radio__box {
-  background-image: url(/img/radio-off--focused.svg);
+  background-image: url(./img/radio-off--focused.svg);
 }
 
 .radio__input:checked:hover + .radio__box,
 .radio__input:checked:focus + .radio__box {
-  background-image: url(/img/radio-on--focused.svg);
+  background-image: url(./img/radio-on--focused.svg);
 }
 
 .radio__input:disabled + .radio__box {
-  background-image: url(/img/checkbox-off--disabled.svg);
+  background-image: url(./img/checkbox-off--disabled.svg);
 }
 
 .radio__input:checked:disabled + .radio__box {
-  background-image: url(/img/radio-on--disabled.svg);
+  background-image: url(./img/radio-on--disabled.svg);
 }
 
 .group-title {
