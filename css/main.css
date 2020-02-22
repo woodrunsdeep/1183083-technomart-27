@@ -1601,7 +1601,7 @@ h3 {
 }
 
 .check__input:checked + .check__box {
-  background-image: url(./img/checkbox-on.svg);
+  background-image: url(img/checkbox-on.svg);
 }
 
 .check:hover .check__box,
