@@ -128,66 +128,62 @@
         </section>
         <div class="catalog-wrapper">
           <section class="filter">
-            <h2>Фильтр:</h2>
-            <form class="filter__form" action="https://echo.htmlacademy.ru" method="POST">
-              <fieldset class="form__group">
-                <legend>Цена:</legend>
-                <!-- Подключить https://refreshless.com/nouislider/ -->
-                <div id="slider"></div>
-                <input type="number" name="min-price" id="min-price" value="0" min="0">
-                <span>–</span>
-                <input type="number" name="max-price" id="max-price" value="30000" min="0">
-              </fieldset>
-              <fieldset class="form__group">
-                <legend>Производители:</legend>
-                <ul class="brands-list">
-                  <li class="brands-list__item">
-                    <span class="custom-checkbox"></span>
-                    <label>
-                      <input type="checkbox" name="brand"  value="Bosch" checked>
-                      Bosch
+            <div class="filter__title-backdrop">
+                <h2 class="filter__title">Фильтр:</h2>
+            </div>
+            <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
+                <fieldset class="filter-form__group">
+                    <legend class="group-title">Цена:</legend>
+                    <div class="slider"></div>
+                    <div class="price-input__wrapper">
+                        <input class="filter-form__price-input" type="text">
+                        <input class="filter-form__price-input filter-form__price-input--till" type="text">
+                    </div>
+                </fieldset>
+                <fieldset class="filter-form__group">
+                    <legend class="group-title">Производители:</legend>
+                    <label class="check option">
+                        <input class="check__input visually-hidden" type="checkbox" checked>
+                        <span class="check__box"></span>
+                        Bosch
                     </label>
-                  </li>
-                  <li class="brands-list__item">
-                    <span class="custom-checkbox"></span>
-                    <label>
-                      <input type="checkbox" name="brand"  value="Interskol">
-                      Интерскол
+                    <label class="check option">
+                        <input class="check__input visually-hidden" type="checkbox">
+                        <span class="check__box"></span>
+                        Интерскол
                     </label>
-                  </li>
-                  <li class="brands-list__item">
-                    <span class="custom-checkbox"></span>
-                    <label>
-                      <input type="checkbox" name="brand"  value="Makita" checked>
-                      Makita
+                    <label class="check option">
+                        <input class="check__input visually-hidden" type="checkbox" checked>
+                        <span class="check__box"></span>
+                        Makita
                     </label>
-                  </li>
-                  <li class="brands-list__item">
-                    <span class="custom-checkbox"></span>
-                    <label>
-                      <input type="checkbox" name="brand"  value="Dewalt">
-                      Dewalt
+                    <label class="check option">
+                        <input class="check__input visually-hidden" type="checkbox">
+                        <span class="check__box"></span>
+                        Dewalt
                     </label>
-                  </li>
-                  <li class="brands-list__item">
-                    <span class="custom-checkbox"></span>
-                    <label>
-                      <input type="checkbox" name="brand"  value="Hitachi">
-                      Hitachi
+                    <label class="check option">
+                        <input class="check__input visually-hidden" type="checkbox">
+                        <span class="check__box"></span>
+                        Hitachi
                     </label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="form__group">
-                <legend>Питание:</legend>
-                <ul class="supply-type">
-                  <li><span class="custom-radio-button"></span><label><input type="radio" name="power-supply" value="battery" checked>Аккумуляторные</label></li>
-                  <li><span class="custom-radio-button"></span><label><input type="radio" name="power-supply" value="ac-supply">Сетевые</label></li>
-                </ul>
-              </fieldset>
-              <button class="button-filter" type="submit">Показать</button>
+                    </fieldset> 
+                    <fieldset class="filter-form__group">
+                        <legend class="group-title">Питание:</legend>
+                        <label class="radio option">
+                            <input class="radio__input visually-hidden" type="radio" name="power-supply" checked>
+                            <span class="radio__box"></span>
+                            Аккумуляторные
+                        </label>
+                        <label class="radio option">
+                            <input class="radio__input visually-hidden" type="radio" name="power-supply">
+                            <span class="radio__box"></span>
+                            Сетевые
+                        </label>
+                    </fieldset> 
+                    <button class="filter-form__submit" type="submit">Показать</button>
             </form>
-          </section>
+            </section>
           <div>
             <section class="sorting">
               <h2 class="sorting__title">Сортировка:</h2>
