@@ -150,7 +150,7 @@ h3 {
   width: 17px;
   height: 17px;
 
-  background-image: url("/img/icon-search.svg");
+  background-image: url("../img/icon-search.svg");
   background-repeat: no-repeat;
 }
 
@@ -316,7 +316,7 @@ h3 {
   width: 19px;
   height: 19px;
 
-  background: url("/img/icon-phone.svg") no-repeat;
+  background: url("../img/icon-phone.svg") no-repeat;
 }
 
 .profile-navigation {
@@ -770,7 +770,7 @@ h3 {
   width: 60px;
   height: 59px;
 
-  background-image: url("/img/new-flag.png");
+  background-image: url("../img/new-flag.png");
 }
 
 .pagination {
@@ -874,7 +874,7 @@ h3 {
   width: 8px;
   height: 12px;
 
-  background-image: url("/img/icon-right-small.svg");
+  background-image: url("../img/icon-right-small.svg");
   background-repeat: no-repeat;
 }
 
@@ -883,7 +883,7 @@ h3 {
   width: 14px;
   height: 12px;
 
-  background-image: url("/img/icon-home.svg");
+  background-image: url("../img/icon-home.svg");
   background-repeat: no-repeat;
 }
 
@@ -1417,7 +1417,7 @@ h3 {
   width: 60px;
   height: 59px;
 
-  background-image: url("/img/new-flag.png");
+  background-image: url("../img/new-flag.png");
 }
 
 .promo__item-title {
@@ -1434,31 +1434,31 @@ h3 {
 
 .promo__item--materials {
   background-color: #ffbf47;
-  background-image: url("/img/icon-bucket.svg");
+  background-image: url("../img/icon-bucket.svg");
   background-position: bottom 27px right 43px;
 }
 
 .promo__item--tools {
   background-color: #3bbce3;
-  background-image: url("/img/icon-drill.svg");
+  background-image: url("../img/icon-drill.svg");
   background-position: bottom 29px right 28px;
 }
 
 .promo__item--machinery {
   background-color: #dc91d8;
-  background-image: url("/img/icon-bulldozer.svg");
+  background-image: url("../img/icon-bulldozer.svg");
   background-position: bottom 30px right 31px;
 }
 
 .promo__item--discounts {
   background-color: #8ed78f;
-  background-image: url("/img/icon-discount-cart.svg");
+  background-image: url("../img/icon-discount-cart.svg");
   background-position: bottom 25px right 45px;
 }
 
 .promo__item--delivery {
   background-color: #ffc047;
-  background-image: url("/img/icon-delivery-truck.svg");
+  background-image: url("../img/icon-delivery-truck.svg");
   background-position: bottom 28px right 31px;
 }
 
@@ -1596,30 +1596,30 @@ h3 {
   height: 23px;
   margin-left: -34px;
 
-  background-image: url(./img/checkbox-off.svg);
+  background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
 }
 
 .check__input:checked + .check__box {
-  background-image: url(img/checkbox-on.svg);
+  background-image: url("../img/checkbox-on.svg");
 }
 
 .check:hover .check__box,
 .check__input:focus + .check__box {
-  background-image: url(./img/checkbox-off--focused.svg);
+  background-image: url("../img/checkbox-off--focused.svg");
 }
 
 .check__input:checked:hover + .check__box,
 .check__input:checked:focus + .check__box {
-  background-image: url(./img/checkbox-on--focused.svg);
+  background-image: url("../img/checkbox-on--focused.svg");
 }
 
 .check__input:disabled + .check__box {
-  background-image: url(./img/checkbox-off--disabled.svg);
+  background-image: url("../img/checkbox-off--disabled.svg");
 }
 
 .check__input:checked:disabled + .check__box {
-  background-image: url(./img/checkbox-on--disabled.svg);
+  background-image: url("../img/checkbox-on--disabled.svg");
 }
 
 .radio {
@@ -1641,30 +1641,30 @@ h3 {
   height: 25px;
   margin-left: -35px;
 
-  background-image: url(./img/radio-off.svg);
+  background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
 }
 
 .radio__input:checked + .radio__box {
-  background-image: url(./img/radio-on.svg);
+  background-image: url("../img/radio-on.svg");
 }
 
 .radio:hover .radio__box,
 .radio__input:focus + .radio__box {
-  background-image: url(./img/radio-off--focused.svg);
+  background-image: url("../img/radio-off--focused.svg");
 }
 
 .radio__input:checked:hover + .radio__box,
 .radio__input:checked:focus + .radio__box {
-  background-image: url(./img/radio-on--focused.svg);
+  background-image: url("../img/radio-on--focused.svg");
 }
 
 .radio__input:disabled + .radio__box {
-  background-image: url(./img/checkbox-off--disabled.svg);
+  background-image: url("../img/checkbox-off--disabled.svg");
 }
 
 .radio__input:checked:disabled + .radio__box {
-  background-image: url(./img/radio-on--disabled.svg);
+  background-image: url("../img/radio-on--disabled.svg");
 }
 
 .group-title {
