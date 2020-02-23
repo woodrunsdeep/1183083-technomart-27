@@ -1992,3 +1992,9 @@ h3 {
     transform: translateX(10px);
   }
 }
+
+/* Сделать модальное окно добавления товара в корзину */
+
+.item-added {
+  display: none;
+}
