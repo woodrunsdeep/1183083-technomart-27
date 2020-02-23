@@ -1410,8 +1410,8 @@ h3 {
 
 .tag-new {
   position: absolute;
-  top: -1px;
-  right: -1px;
+  top: 0;
+  right: 0;
 
   display: block;
   width: 60px;
@@ -1509,12 +1509,6 @@ h3 {
 
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
-}
-
-/*  Временно скрыто */
-
-.modal-windows {
-  display: none;
 }
 
 /* Фильтр */
@@ -1763,4 +1757,179 @@ h3 {
   border: 1px solid #e5e5e5;
   border-radius: 2px;
   cursor: pointer;
+}
+
+
+/* Карта */
+
+.modal-map {
+  position: relative;
+
+  display: inline-block;
+
+  font-size: 0;
+  line-height: 0;
+
+  background-color: #565656;
+  box-shadow: 0 0 14.7px 1.3px rgba(47, 42, 43, 0.5);
+}
+
+.modal-map__image {
+  width: 100%;
+  height: auto;
+}
+
+.close-button {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.close-button::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 0;
+
+  width: 25px;
+  height: 3px;
+
+  background-color: #ee3643;
+  transform: rotate(45deg);
+}
+
+.close-button::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 0;
+
+  width: 25px;
+  height: 3px;
+
+  background-color: #ee3643;
+  transform: rotate(-45deg);
+}
+
+/* Форма обратной связи */
+
+.feedback-form {
+  position: relative;
+  top: 120px;
+  left: 50%;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 620px;
+  min-height: 430px;
+  margin-left: -310px;
+  padding-top: 55px;
+  padding-right: 80px;
+  padding-bottom: 37px;
+  padding-left: 80px;
+
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75),
+  0 7px 0 0 #ee3643 inset;
+}
+
+.feedback-form__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.feedback-form__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form__field--resizable {
+  flex-grow: 1;
+}
+
+.feedback-form__caption {
+  margin-bottom: 8px;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-family: Cuprum;
+}
+
+.feedback-form__input {
+  box-sizing: border-box;
+  min-width: 220px;
+  min-height: 38px;
+  margin-bottom: 22px;
+  padding-left: 16px;
+
+  font-family: "PT Sans", Arial, sans-serif;
+
+  border: solid 2px #dee3e4;
+  border-radius: 2px;
+}
+
+.feedback-form__input--message {
+  flex-grow: 1;
+  min-height: 114px;
+  margin-bottom: 37px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  resize: none;
+}
+
+.feedback-form__input::placeholder {
+  color: #a9a9a9;
+}
+
+.feedback-form__input:hover {
+  border-color: #b5b5b5;
+}
+
+.feedback-form__input:focus {
+  border-color: #ee3643;
+  outline: none;
+}
+
+.feedback-form__button {
+  width: 100%;
+  min-height: 38px;
+  margin-top: 37px;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Cuprum", Arial, sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: #ee3643;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.feedback-form__close-button {
+  top: 16px;
+}
+
+.modal {
+  position: fixed;
+
+  display: none;
+}
+
+.modal-show {
+  display: block;
 }

@@ -444,28 +444,45 @@
       </div>
     </footer>
     <section class="modal-windows">
-      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <h2 class="visually-hidden">Форма обратной связи</h2>
-        <ul>
-          <li>
-            <label for="name">Ваше имя:</label>
-            <input type="text" name="name" id="name" placeholder="Имя Фамилия" required>
-          </li>
-          <li>
-            <label for="email">Ваш e-mail:</label>
-            <input type="email" name="email" id="email" placeholder="email@example.com" required>
-          </li>
-          <li>
-            <label for="message">Текст письма:</label>
-            <textarea name="message" id="message" placeholder="В свободной форме" required></textarea>
-          </li>
-        </ul>
-        <button class="button button--large" type="submit">Отправить</button>
-        <button class="button-close"><span class="visually-hidden">Закрыть</span></button>
+      <form class="modal feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="feedback-form__contacts">
+          <label class="feedback-form__field">
+            <span class="feedback-form__caption">Ваше имя:</span>
+            <input class="feedback-form__input" 
+                  type="text" 
+                  placeholder="Имя Фамилия" 
+                  required>
+          </label>
+          <label class="feedback-form__field">
+            <span class="feedback-form__caption">Ваш e-mail:</span>
+            <input class="feedback-form__input" 
+                  type="email" 
+                  placeholder="email@example.com" 
+                  required>
+          </label>
+        </div>
+        <label class="feedback-form__field feedback-form__field--resizable">
+          <span class="feedback-form__caption">Текст письма:</span>
+          <textarea class="feedback-form__input feedback-form__input--message" 
+                    name="message" 
+                    placeholder="В свободной форме" 
+                    required></textarea>
+        </label>
+        <button class="feedback-form__button" 
+                type="submit">
+          Отправить
+        </button>
+        <button class="feedback-form__close-button close-button"
+                type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
       </form>
-      <div class="modal-map">
-        <img src="img/map-max.png" width="940" height="446" alt="Офис по адресу улица Большая Конюшенная, 19">
-        <button class="button-close"><span class="visually-hidden">Закрыть</span></button>
+      <div class="modal modal-map">
+        <img class="modal-map__image" width="940" height="446" src="img/map-max.png" alt="Офис по адресу улица Большая Конюшенная, 19">
+        <button class="close-button"
+                type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
       </div>
     </section>
     <script src="js/script.js"></script>
