@@ -1763,15 +1763,24 @@ h3 {
 /* Карта */
 
 .modal-map {
-  position: relative;
+  position: fixed;
+  top: 120px;
+  left: 50%;
 
   display: inline-block;
+  margin-left: -470px;
 
   font-size: 0;
   line-height: 0;
 
   background-color: #565656;
   box-shadow: 0 0 14.7px 1.3px rgba(47, 42, 43, 0.5);
+}
+
+.modal-map__iframe {
+  position: absolute;
+
+  border: none;
 }
 
 .modal-map__image {
@@ -1924,6 +1933,26 @@ h3 {
   top: 16px;
 }
 
+/* Анимация формы обратной связи */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .modal {
   position: fixed;
 
@@ -1932,4 +1961,34 @@ h3 {
 
 .modal-show {
   display: block;
+
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+/* Анимация после ввода некорректных данных */
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }

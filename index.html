@@ -449,16 +449,18 @@
           <label class="feedback-form__field">
             <span class="feedback-form__caption">Ваше имя:</span>
             <input class="feedback-form__input" 
-                  type="text" 
+                  type="text"
+                  name="username"
                   placeholder="Имя Фамилия" 
-                  required>
+                  >
           </label>
           <label class="feedback-form__field">
             <span class="feedback-form__caption">Ваш e-mail:</span>
             <input class="feedback-form__input" 
-                  type="email" 
+                  type="email"
+                  name="email" 
                   placeholder="email@example.com" 
-                  required>
+                  >
           </label>
         </div>
         <label class="feedback-form__field feedback-form__field--resizable">
@@ -466,7 +468,7 @@
           <textarea class="feedback-form__input feedback-form__input--message" 
                     name="message" 
                     placeholder="В свободной форме" 
-                    required></textarea>
+                    ></textarea>
         </label>
         <button class="feedback-form__button" 
                 type="submit">
@@ -478,6 +480,7 @@
         </button>
       </form>
       <div class="modal modal-map">
+        <iframe class="modal-map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="940" height="446" allowfullscreen></iframe>
         <img class="modal-map__image" width="940" height="446" src="img/map-max.png" alt="Офис по адресу улица Большая Конюшенная, 19">
         <button class="close-button"
                 type="button">
