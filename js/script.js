@@ -1,6 +1,6 @@
 var feedbackLink = document.querySelector(".contact__button"); 
 
-var mapLink = document.querySelector(".map__link")
+var mapLink = document.querySelector(".map__link");
 
 var popup = document.querySelector(".feedback-form");
 
@@ -13,6 +13,8 @@ var close = document.querySelector(".close-button");
 var username = document.querySelector("[name=username]");
 
 var email = document.querySelector("[name=email]");
+
+var message = document.querySelector("[name=message]");
 
 var feedbackForm = document.querySelector(".feedback-form");
 
@@ -63,7 +65,7 @@ close.addEventListener("click", function (evt) {
 });
 
 feedbackForm.addEventListener("submit", function(evt) {
-    if (!username.value || !email.value) {
+    if (!username.value || !email.value || !message.value) {
         evt.preventDefault();
         popup.classList.remove("modal-error");
         popup.offsetWidth = popup.offsetWidth;
