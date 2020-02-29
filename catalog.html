@@ -210,7 +210,7 @@
               <h2 class="sorting__title">Сортировка:</h2>
               <ul class="sorting__list">
                 <li class="sorting__item">
-                  <a class="sorting__property" href="#">По цене</a>
+                  <a class="sorting__property sorting__property--current" href="#">По цене</a>
                 </li>
                 <li class="sorting__item">
                   <a class="sorting__property" href="#">По типу</a>
@@ -218,14 +218,16 @@
                 <li class="sorting__item">
                   <a class="sorting__property" href="#">По функционалу</a>
                 </li>
-                <li class="sorting__item">
+              </ul>
+              <ul class="sorting-order">
+                <li class="sorting__item--order">
                   <a class="sorting__property--order-ascending"href="#">
-                    <svg class="order" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                    <svg class="order order--current" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                       <path d="M5.5 0L0 10h11z"/>
                   </svg>
                   </a>
                 </li>
-                <li class="sorting__item">
+                <li class="sorting__item--order">
                   <a class="sorting__property--order-descending"href="#">
                     <svg class="order order-descending" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                       <path d="M5.5 0L0 10h11z"/>
@@ -355,7 +357,7 @@
                   </article>
                 </li>
                 <li class="products__item">
-                <article class="product" tabindex="0">
+                <article class="product">
                     <h3 class="product__title">
                       <a class="product__link" href="#">Перфоратор BOSCH BFG 2000</a>  
                     </h3>
@@ -397,6 +399,7 @@
                       <li class="product__price product__price--old">22500 Р.</li>
                       <li class="product__price product__price--new">15500 Р.</li>
                     </ul>
+                    <span class="tag tag-new"></span>
                   </article>
                 </li>
                 <li class="products__item">
@@ -468,7 +471,7 @@
       </div>
         <section class="about-product">
           <div class="about-product__wrapper">
-            <h2 class="section__title">Пара слов о перфораторах</h2>
+            <h2 class="section__title about-product__title">Пара слов о перфораторах</h2>
             <p class="about-product__paragraph">
               Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
               Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br>
@@ -549,7 +552,7 @@
               </a>
             </li>
           </ul>
-          <div class="footer__copyright">
+          <div class="footer__links-block">
             <p class="footer__feedback">
               <span class="footer__copyright-caption">Обратная связь:</span>
               <a class="feedback__link" href="mailto:mail@htmlacademy.ru" target="_blank">mail@htmlacademy.ru</a></p>
@@ -570,6 +573,6 @@
       </div>
     </section>
     <script src="./js/script.js"></script>
-    <script src="./js/setTabIndex.js"></script>
+    <!-- <script src="./js/setTabIndex.js"></script> -->
   </body>
 </html>
