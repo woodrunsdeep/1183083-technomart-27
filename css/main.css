@@ -248,7 +248,7 @@ h3 {
 }
 
 .cart {
-  background-image: url(/img/icon-cart.svg);
+  background-image: url("../img/icon-cart.svg");
 }
 
 .bookmarks {
@@ -257,7 +257,7 @@ h3 {
   width: 14px;
   height: 16px;
 
-  background-image: url(/img/icon-bookmark.svg);
+  background-image: url("../img/icon-bookmark.svg");
 }
 
 .user-navigation__button:hover,
