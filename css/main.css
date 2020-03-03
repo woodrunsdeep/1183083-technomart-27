@@ -22,7 +22,8 @@ a {
 
 h2,
 .section__title {
-  /* margin: 0; */
+  margin: 0;
+
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
@@ -815,11 +816,15 @@ h3 {
   justify-content: center;
   align-items: center;
   min-width: 135px;
-  padding: 10px 20px;
+  min-height: 38px;
+  padding-right: 40px;
+  padding-left: 40px;
 
   font-size: 14px;
   line-height: 18px;
   font-family: "Cuprum", Arial, sans-serif;
+  vertical-align: middle;
+  text-align: center;
   color: #ffffff;
   text-transform: uppercase;
 
@@ -1053,7 +1058,9 @@ h3 {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  padding-top: 25.5px;
   padding-right: 24px;
+  padding-bottom: 25.5px;
   padding-left: 28px;
 
   background-color: #f9f5f0;
@@ -1098,12 +1105,171 @@ h3 {
   margin: auto;
 }
 
+.services {
+  padding-top: 65px;
+
+  background-color: #f4f7f9;
+}
+
+.services__wrapper {
+  width: 940px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.slider-wrapper {
+  display: flex;
+}
+
+.services__title {
+  margin-top: 0;
+  margin-bottom: 26px;
+
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1;
+  font-family: "Cuprum", Arial, sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.services__paragraph {
+  margin-bottom: 24px;
+
+  font-size: 13px;
+  line-height: 1.85;
+  font-family: "PT Sans", Arial, sans-serif;
+  color: #000000;
+}
+
+.slider-controls {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  margin: 0;
+  padding: 0;
+  padding-top: 46px;
+  padding-bottom: 46px;
+}
+
+.slider-controls::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 10px;
+  height: 279px;
+
+  background-image: url("../img/shadow.png");
+  background-repeat: no-repeat;
+}
+
+.slider-controls__item {
+  max-width: 240px;
+  padding-top: 14px;
+  padding-bottom: 18px;
+  padding-left: 22px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 1.43;
+  font-family: "Cuprum", Arial, sans-serif;
+  text-align: left;
+  color: white;
+  letter-spacing: normal;
+
+  background-color: #32425c;
+  box-shadow: 0 -1px 0 0 #293449 inset, inset 0 1px 0 0 #405069;
+  cursor: pointer;
+}
+
+.slider-controls__item:hover {
+  background-color: #293449;
+}
+
+.slider-list {
+  flex-grow: 1;
+  min-height: 316px;
+  margin-bottom: 0;
+  padding-left: 80px;
+
+  list-style: none;
+
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.slide {
+  display: none;
+}
+
+.slide__title {
+  margin-top: 30px;
+  margin-bottom: 25px;
+
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 1;
+  font-family: "Cuprum", Arial, sans-serif;
+  color: #32425c;
+  text-transform: uppercase;
+  letter-spacing: normal;
+}
+
+/* Применение фона при активном инпуте */
+
+#slide-1:checked ~ .slider-list {
+  background-image: url("../img/delivery.png");
+}
+
+#slide-2:checked ~ .slider-list {
+  background-image: url("../img/guarantee.png");
+}
+
+#slide-3:checked ~ .slider-list {
+  background-image: url("../img/credit.png");
+}
+
+/* Отображение слайдов при активном инпуте */
+
+#slide-1:checked ~ .slider-list #slide1,
+#slide-2:checked ~ .slider-list #slide2,
+#slide-3:checked ~ .slider-list #slide3 {
+  display: block;
+  /*   display: flex;
+flex-direction: column;
+align-items: flex-start; */
+}
+
+/* Стилизация состояний лейблов */
+
+#slide-1:checked ~ .slider-controls label[for="slide-1"],
+#slide-2:checked ~ .slider-controls label[for="slide-2"],
+#slide-3:checked ~ .slider-controls label[for="slide-3"] {
+  color: #32425c;
+
+  background-color: #ffffff;
+  box-shadow: none;
+}
+
+/* Базовый аутлайн */
+
+#slide-1:focus ~ .slider-controls label[for="slide-1"],
+#slide-2:focus ~ .slider-controls label[for="slide-2"],
+#slide-3:focus ~ .slider-controls label[for="slide-3"] {
+  outline: 1px dotted gray;
+}
+
 .about-us {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
   justify-content: start;
-  padding-top: 40px;
+  padding-top: 79px;
   padding-right: 120px;
   padding-bottom: 40px;
 }
@@ -1140,7 +1306,7 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: stretch;
-  padding-top: 40px;
+  padding-top: 79px;
   padding-bottom: 40px;
 }
 
@@ -1150,7 +1316,7 @@ h3 {
 
 .contact__paragraph {
   margin-top: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 
   line-height: 24px;
   font-family: "PT Sans", Arial, sans-serif;
@@ -1162,7 +1328,7 @@ h3 {
 
 .contact__button {
   align-self: stretch;
-  margin-top: 40px;
+  margin-top: 36px;
 }
 
 .about-product {
@@ -1512,7 +1678,7 @@ h3 {
   border-bottom: none;
 }
 
-.promo__slider {
+.promo-slider {
   position: absolute;
   top: 202px;
   left: 0;
@@ -1520,7 +1686,97 @@ h3 {
   width: 620px;
   height: 266px;
 
-  background-color: tomato;
+  /* background-color: tomato; */
+}
+
+.promo-slider__list {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.promo-slider__item {
+  display: none;
+  width: 100%;
+  height: 100%;
+
+  list-style: none;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.promo-slide {
+  padding-top: 22px;
+  padding-left: 25px;
+}
+
+.promo-slider__title {
+  margin-top: 0;
+  margin-bottom: 2px;
+  /* font-weight: normal; */
+
+  font-size: 36px;
+  line-height: 1;
+  font-family: "Cuprum", Arial, sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.promo-slider__paragraph {
+  margin: 0;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.33;
+  font-family: "Cuprum", Arial, sans-serif;
+  color: #ffffff;
+  font-stretch: normal;
+  letter-spacing: normal;
+}
+
+.promo-slider__button {
+  position: absolute;
+  bottom: 22px;
+
+  min-width: 195px;
+}
+
+#promo-slide-1:checked ~ .promo-slider__list #promo-slide-1,
+#promo-slide-2:checked ~ .promo-slider__list #promo-slide-2 {
+  display: block;
+}
+
+#promo-slide-1:checked ~ .promo-slider__list #promo-slide-1 {
+  background-image: url("../img/slider-image-drill.jpg");
+}
+
+#promo-slide-2:checked ~ .promo-slider__list #promo-slide-2 {
+  background-image: url("../img/slider-image-hammer-drill.jpg");
+}
+
+.promo-slider-controls__item {
+  position: absolute;
+  top: 50%;
+
+  width: 22px;
+  height: 40px;
+
+  background-image: url("../img/icon-arrow.svg");
+  cursor: pointer;
+}
+
+.previous {
+  left: 25px;
+
+  transform: translateY(-20px);
+}
+
+.next {
+  right: 20px;
+
+  transform: translateY(-20px) rotate(180deg);
 }
 
 /* Промо-блок */

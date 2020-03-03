@@ -108,7 +108,8 @@
         </ul>
       </nav>
     </header>
-    <main class="main wrapper">
+    <main class="main">
+      <div class="wrapper">
       <h1 class="visually-hidden">Интернет-магазин Техномарт</h1>
       <section class="promo">
         <h2 class="visually-hidden">Промо-блок</h2>
@@ -135,29 +136,29 @@
             <a class="promo__item-link" href="#">Бесплатно</a>
           </li>
         </ul>
-        <div class="promo__slider">
-          <div class="buttons">
-            <button class="previous">
-              <span>Previous</span>
-            </button>
-            <button class="next">
-              <span>Next</span>
-            </button>
-            <div class="radio-buttons">
-              <label><input type="radio" name="slide" value="drills">Дрели</label>
-              <label><input type="radio" name="slide" value="hammer-drills">Перфораторы</label>
-            </div>
-          </div>
-          <ul class="slider-list">
-            <li class="slider-list__item">
-              <h3>Дрели</h3>
-              <p>Соседям на радость!</p>
-              <a href="./catalog.html">Открыть каталог</a>
+        <div class="promo-slider">
+
+          <label class="promo-slider-controls__item previous" for="promo-slide-1">
+            <span class="visually-hidden">Назад</span>
+          </label>
+          
+          <label class="promo-slider-controls__item next" for="promo-slide-2">
+            <span class="visually-hidden">Вперед</span>
+          </label>
+        
+        <input type="radio" name="promo-toggle" id="promo-slide-1" class="visually-hidden" checked>
+        <input type="radio" name="promo-toggle" id="promo-slide-2" class="visually-hidden">
+
+          <ul class="promo-slider__list">
+            <li class="promo-slider__item promo-slide" id="promo-slide-1">
+              <h3 class="promo-slider__title">Дрели</h3>
+              <p class="promo-slider__paragraph">Соседям на радость!</p>
+              <a class="button promo-slider__button" href="./catalog.html">Открыть каталог</a>
             </li>
-            <li class="slider-list__item">
-              <h3>Перфораторы</h3>
-              <p>Настоящие мужские игрушки</p>
-              <a href="./catalog.html.html">Открыть каталог</a>
+            <li class="promo-slider__item promo-slide" id="promo-slide-2">
+              <h3 class="promo-slider__title">Перфораторы</h3>
+              <p class="promo-slider__paragraph">Настоящие мужские игрушки</p>
+              <a class="button promo-slider__button" href="./catalog.html">Открыть каталог</a>
             </li>
           </ul>
         </div>
@@ -310,43 +311,63 @@
           </li>
         </ul>
       </section>
+      </div>
       <section class="services">
-        <h2>Сервисы</h2>
-        <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо все сил, чтобы сделать ваши покупки приятными.</p>
-        <div class="services__slider">
-          <ul class="services__slider-list">
-            <li class="services__slider-item">
-              <label>
-                <input type="radio" name="service" value="delivery">Доставка
-              </label>
-              <h3>Доставка</h3>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
-            </li>
-            <li class="services__slider-item">
-              <label>
-                <input type="radio" name="service" value="guarantee">Гарантия
-              </label>
-              <h3>Гарантия</h3>
-              <p>
-                Если купленный у нас товар поломается или заискрит,<br>
-                а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
-                Дом уж восстановите как-нибуль сами.
+        <div class="wrapper">
+        <h2 class="services__title">Сервисы</h2>
+        <p class="services__paragraph">
+          Хороший интернет-магазин отличается от плохого не только ценами!<br>
+          Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+        </p>
+  
+        <!-- Доступно скрытые радиокнопки -->
+        <div class="slider-wrapper">
+          <input type="radio" name="toggle" id="slide-1" class="visually-hidden" checked>
+          <input type="radio" name="toggle" id="slide-2" class="visually-hidden">
+          <input type="radio" name="toggle" id="slide-3" class="visually-hidden">
+  
+          <!-- Контролы в виде лейблов -->
+          <div class="slider-controls">
+            <label class="slider-controls__item" for="slide-1">Доставка</label>
+            <label class="slider-controls__item" for="slide-2">Гарантия</label>
+            <label class="slider-controls__item" for="slide-3">Кредит</label>
+          </div>
+  
+  
+          <!-- Список слайдов -->
+          <ul class="slider-list">
+            <li class="slider-list__item slide" id="slide1">
+              <h3 class="slide__title">Доставка</h3>
+              <p class="services__paragraph">
+                Мы с удовольствием доставим ваш товар прямо<br> 
+                к вашему подъезду совершенно бесплатно!<br>
+                Ведь мы неплохо заработаем,<br>
+                поднимая его на ваш этаж!
               </p>
             </li>
-            <li class="services__slider-item">
-              <label>
-                <input type="radio" name="service" value="credit">Кредит
-              </label>
-              <h3>Кредит</h3>
-              <p>
+            <li class="slider-list__item slide" id="slide2">
+              <h3 class="slide__title">Гарантия</h3>
+              <p class="services__paragraph">
+                Если купленный у нас товар поломается или заискрит,<br>
+                а также в случае пожара, спровоцированного его возгоранием,<br>
+                вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+                сгоревший товар на новый.<br>
+                Дом уж восстановите как-нибудь сами.
+              </p>
+            </li>
+            <li class="slider-list__item slide" id="slide3">
+              <h3 class="slide__title">Кредит</h3>
+              <p class="services__paragraph">
                 Залезть в долговую яму стало проще!<br>
                 Кредитные консультанты придут вам на помощь.
               </p>
+              <a class="button" href="#">Отправить заявку</a>
             </li>
           </ul>
         </div>
+      </div>
       </section>
-      <div class="wrapper--row">
+      <div class="wrapper wrapper--row">
         <section class="about-us">
           <h2 class="about-us__title">Компания «Техномарт»</h2>
           <p class="about-us__paragraph">
