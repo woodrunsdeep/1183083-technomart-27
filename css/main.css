@@ -927,15 +927,14 @@ h3 {
 }
 
 .pagination__button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
   min-width: 38px;
   padding: 9px;
 
   font-size: 13px;
   line-height: 18px;
   font-family: "PT Sans", Arial, sans-serif;
+  text-align: center;
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
