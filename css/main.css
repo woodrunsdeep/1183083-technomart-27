@@ -314,15 +314,17 @@ h3 {
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 39px;
+  padding-left: 53px;
 }
 
 .header__site-description {
   align-self: center;
-  width: 270px;
+  width: 216px;
   margin: 0;
+  margin-right: 51px;
   /* margin-right: 5px; */
-  padding-right: 11px;
-  padding-left: 53px;
+  /* padding-right: 11px; */
+  /* padding-left: 53px; */
 
   font-style: italic;
   font-size: 16px;
@@ -337,6 +339,7 @@ h3 {
   align-items: center;
   min-width: 270px;
   margin: 0;
+  margin-right: auto;
   padding: 0;
 
   list-style: none;
@@ -393,14 +396,20 @@ h3 {
 .profile {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  /* width: 300px; */
-  min-width: 300px;
+  justify-content: flex-start;
+  max-width: 300px;
+  /* min-width: 300px; */
   margin: 0;
-  margin-bottom: 7px;
+  /* margin-bottom: 7px; */
   padding: 0;
 
   list-style: none;
+}
+
+.profile__item {
+  position: relative;
+
+  /* margin-bottom: 7px; */
 }
 
 .profile__button {
@@ -485,7 +494,7 @@ h3 {
   fill: #c5c5c5;
 }
 
-.profile-links {
+/* .profile-links {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -494,11 +503,13 @@ h3 {
   padding: 0;
 
   list-style: none;
-}
+} */
 
-.profile-links__link {
+.profile__link {
+  display: inline-block;
+  margin-top: 7px;
   margin-right: 15px;
-  margin-left: 17px;
+  margin-left: 18px;
 
   font-style: normal;
   font-weight: normal;
@@ -515,14 +526,15 @@ h3 {
   0 -2px #32425c inset;
 }
 
-.profile-links__item {
+.profile__link {
   position: relative;
 }
 
-.profile-links__item:nth-of-type(2n)::before {
+.profile__item:nth-of-type(4n)::before {
   content: "";
   position: absolute;
-  top: 7px;
+  top: 14px;
+  left: 1px;
 
   width: 4px;
   height: 4px;
@@ -533,15 +545,15 @@ h3 {
   border-radius: 50%;
 }
 
-.profile-links__link:hover,
-.profile-links__link:focus {
+.profile__link:hover,
+.profile__link:focus {
   color: #ee3643;
 
   box-shadow: 0 -1px #f4f7f9 inset,
   0 -2px #ee3643 inset;
 }
 
-.profile-links__link:active {
+.profile__link:active {
   color: rgba(50, 66, 92, 0.3);
 
   box-shadow: 0 -1px #f4f7f9 inset,
