@@ -943,13 +943,6 @@ h3 {
   border-radius: 3px;
 }
 
-.pagination__button--current {
-  color: #ffffff;
-
-  background-color: #ee3643;
-  border-color: transparent;
-}
-
 .pagination__button--next {
   min-width: 140px;
 }
@@ -962,6 +955,16 @@ h3 {
 
 .pagination__button:active {
   border-color: #ee3643;
+}
+
+.pagination__button--current {
+  color: #ffffff;
+
+  background-color: #ee3643;
+  border-color: transparent;
+}
+.pagination__button--current:hover {
+  border-color: transparent;
 }
 
 /* Хлебные крошки */
