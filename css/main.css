@@ -1274,7 +1274,7 @@ align-items: flex-start; */
 
 .about-us {
   display: flex;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   flex-direction: column;
   justify-content: start;
   padding-top: 79px;
@@ -1313,7 +1313,7 @@ align-items: flex-start; */
 .contact {
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+  /* justify-content: stretch; */
   padding-top: 79px;
   padding-bottom: 40px;
 }
@@ -1324,18 +1324,18 @@ align-items: flex-start; */
 
 .contact__paragraph {
   margin-top: 15px;
-  margin-bottom: 12px;
+  margin-bottom: 32px;
 
   line-height: 24px;
   font-family: "PT Sans", Arial, sans-serif;
 }
 
 .map__link {
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .contact__button {
-  align-self: stretch;
+  /* align-self: stretch; */
   margin-top: 36px;
 }
 
