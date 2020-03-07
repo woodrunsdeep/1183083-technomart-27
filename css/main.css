@@ -2015,13 +2015,13 @@ align-items: flex-start; */
   background-repeat: no-repeat;
 }
 
-.check__input:checked + .check__box {
-  background-image: url("../img/checkbox-on.svg");
-}
-
 .check:hover .check__box,
 .check__input:focus + .check__box {
   background-image: url("../img/checkbox-off--focused.svg");
+}
+
+.check__input:checked + .check__box {
+  background-image: url("../img/checkbox-on.svg");
 }
 
 .check__input:checked:hover + .check__box,
