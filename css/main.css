@@ -1274,9 +1274,8 @@ align-items: flex-start; */
 
 .about-us {
   display: flex;
-  /* flex-grow: 1; */
   flex-direction: column;
-  justify-content: start;
+  width: 640px;
   padding-top: 79px;
   padding-right: 120px;
   padding-bottom: 40px;
@@ -1304,7 +1303,7 @@ align-items: flex-start; */
 }
 
 .about-us__button {
-  align-self: start;
+  align-self: flex-start;
   min-width: 220px;
   margin-top: 7px;
   margin-bottom: 45px;
