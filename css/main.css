@@ -822,6 +822,7 @@ h3 {
 }
 
 .button {
+  display: inline-block;
   min-width: 135px;
   padding: 9px 20px;
 
@@ -1273,21 +1274,22 @@ align-items: flex-start; */
 }
 
 .about-us {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   width: 640px;
+  min-height: 536px;
   padding-top: 79px;
   padding-right: 120px;
   padding-bottom: 40px;
 }
 
 .about-us__title {
-  margin-bottom: 10px;
+  margin-bottom: 26px;
 }
 
 .about-us__paragraph {
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin-top: 24px;
+  margin-bottom: 20px;
 
   line-height: 24px;
   font-family: "PT Sans", Arial, sans-serif;
@@ -1303,27 +1305,28 @@ align-items: flex-start; */
 }
 
 .about-us__button {
-  align-self: flex-start;
+  /* align-self: flex-start; */
   min-width: 220px;
   margin-top: 7px;
   margin-bottom: 45px;
 }
 
 .contact {
-  display: flex;
-  flex-direction: column;
+  width: 300px;
+  /* display: flex; */
+  /* flex-direction: column; */
   /* justify-content: stretch; */
   padding-top: 79px;
   padding-bottom: 40px;
 }
 
 .contact__title {
-  margin-bottom: 10px;
+  margin-bottom: 26px;
 }
 
 .contact__paragraph {
-  margin-top: 15px;
-  margin-bottom: 32px;
+  margin-top: 24px;
+  margin-bottom: 20px;
 
   line-height: 24px;
   font-family: "PT Sans", Arial, sans-serif;
@@ -1333,7 +1336,12 @@ align-items: flex-start; */
   /* margin-top: 20px; */
 }
 
+.map__image {
+  margin-top: 11px;
+}
+
 .contact__button {
+  width: 100%;
   /* align-self: stretch; */
   margin-top: 36px;
 }
