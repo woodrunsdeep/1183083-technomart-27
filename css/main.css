@@ -824,7 +824,8 @@ h3 {
 .button {
   display: inline-block;
   min-width: 135px;
-  padding: 9px 20px;
+  min-height: 38px;
+  padding: 7px 20px;
 
   font-size: 14px;
   line-height: 18px;
@@ -834,7 +835,7 @@ h3 {
   text-transform: uppercase;
 
   background-color: #ee3643;
-  border: 1px solid transparent;
+  border: 3px solid transparent;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -852,7 +853,7 @@ h3 {
   color: #32425c;
 
   background-color: #ffffff;
-  border: 3px solid #63a63e;
+  border-color: #63a63e;
 }
 
 .button--bookmark:hover,
