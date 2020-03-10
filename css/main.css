@@ -1232,34 +1232,31 @@ h3 {
 
 /* Применение фона при активном инпуте */
 
-#slide-1:checked ~ .slider-list {
+.slide-1:checked ~ .slider-list {
   background-image: url("../img/delivery.png");
 }
 
-#slide-2:checked ~ .slider-list {
+.slide-2:checked ~ .slider-list {
   background-image: url("../img/guarantee.png");
 }
 
-#slide-3:checked ~ .slider-list {
+.slide-3:checked ~ .slider-list {
   background-image: url("../img/credit.png");
 }
 
 /* Отображение слайдов при активном инпуте */
 
-#slide-1:checked ~ .slider-list #slide1,
-#slide-2:checked ~ .slider-list #slide2,
-#slide-3:checked ~ .slider-list #slide3 {
+.slide-1:checked ~ .slider-list #slide1,
+.slide-2:checked ~ .slider-list #slide2,
+.slide-3:checked ~ .slider-list #slide3 {
   display: block;
-  /*   display: flex;
-flex-direction: column;
-align-items: flex-start; */
 }
 
 /* Стилизация состояний лейблов */
 
-#slide-1:checked ~ .slider-controls label[for="slide-1"],
-#slide-2:checked ~ .slider-controls label[for="slide-2"],
-#slide-3:checked ~ .slider-controls label[for="slide-3"] {
+.slide-1:checked ~ .slider-controls label[for="slide-1"],
+.slide-2:checked ~ .slider-controls label[for="slide-2"],
+.slide-3:checked ~ .slider-controls label[for="slide-3"] {
   color: #32425c;
 
   background-color: #ffffff;
@@ -1268,9 +1265,9 @@ align-items: flex-start; */
 
 /* Базовый аутлайн */
 
-#slide-1:focus ~ .slider-controls label[for="slide-1"],
-#slide-2:focus ~ .slider-controls label[for="slide-2"],
-#slide-3:focus ~ .slider-controls label[for="slide-3"] {
+.slide-1:focus ~ .slider-controls label[for="slide-1"],
+.slide-2:focus ~ .slider-controls label[for="slide-2"],
+.slide-3:focus ~ .slider-controls label[for="slide-3"] {
   outline: 1px dotted gray;
 }
 
@@ -1331,10 +1328,6 @@ align-items: flex-start; */
 
   line-height: 24px;
   font-family: "PT Sans", Arial, sans-serif;
-}
-
-.map__link {
-  /* margin-top: 20px; */
 }
 
 .map__image {
@@ -1759,17 +1752,27 @@ align-items: flex-start; */
   min-width: 195px;
 }
 
-#promo-slide-1:checked ~ .promo-slider__list #promo-slide-1,
-#promo-slide-2:checked ~ .promo-slider__list #promo-slide-2 {
+.promo-slide-1:checked ~ .promo-slider__list .promo-slide-1,
+.promo-slide-2:checked ~ .promo-slider__list .promo-slide-2 {
   display: block;
 }
 
-#promo-slide-1:checked ~ .promo-slider__list #promo-slide-1 {
+.promo-slide-1:checked ~ .promo-slider__list .promo-slide-1 {
   background-image: url("../img/slider-image-drill.jpg");
 }
 
-#promo-slide-2:checked ~ .promo-slider__list #promo-slide-2 {
+.promo-slide-2:checked ~ .promo-slider__list .promo-slide-2 {
   background-image: url("../img/slider-image-hammer-drill.jpg");
+}
+
+.promo-slide-1:checked ~ .promo-slide-1 .indicator {
+  background-color: red;
+  border-color: white;
+}
+
+.promo-slide-2:checked ~ .promo-slide-2 .indicator {
+  background-color: red;
+  border-color: white;
 }
 
 .promo-slider-controls__item {
@@ -1793,6 +1796,24 @@ align-items: flex-start; */
   right: 20px;
 
   transform: translateY(-19px) rotate(180deg);
+}
+
+.indicator {
+  position: absolute;
+  bottom: 36px;
+  left: 295px;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.indicator--current {
+  left: 315px;
 }
 
 /* Промо-блок */

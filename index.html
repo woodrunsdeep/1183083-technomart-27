@@ -136,24 +136,29 @@
         </ul>
         <div class="promo-slider">
 
-          <label class="promo-slider-controls__item previous" for="promo-slide-1">
+          
+          <input class="promo-slide-1 visually-hidden" type="radio" name="promo-toggle" id="promo-slide-1" checked>
+          <input class="promo-slide-2 visually-hidden" type="radio" name="promo-toggle" id="promo-slide-2">
+          
+          <label class="promo-slide-1" for="promo-slide-1">
             <span class="visually-hidden">Назад</span>
+            <span class="promo-slider-controls__item previous"></span>
+            <span class="indicator"></span>
           </label>
           
-          <label class="promo-slider-controls__item next" for="promo-slide-2">
+          <label class="promo-slide-2" for="promo-slide-2">
             <span class="visually-hidden">Вперед</span>
+            <span class="promo-slider-controls__item next"></span>
+            <span class="indicator indicator--current"></span>
           </label>
-        
-        <input type="radio" name="promo-toggle" id="promo-slide-1" class="visually-hidden" checked>
-        <input type="radio" name="promo-toggle" id="promo-slide-2" class="visually-hidden">
-
+          
           <ul class="promo-slider__list">
-            <li class="promo-slider__item promo-slide" id="promo-slide-1">
+            <li class="promo-slider__item promo-slide promo-slide-1" id="promo-slide-1">
               <h3 class="promo-slider__title">Дрели</h3>
               <p class="promo-slider__paragraph">Соседям на радость!</p>
               <a class="button promo-slider__button" href="./catalog.html">Открыть каталог</a>
             </li>
-            <li class="promo-slider__item promo-slide" id="promo-slide-2">
+            <li class="promo-slider__item promo-slide promo-slide-2" id="promo-slide-2">
               <h3 class="promo-slider__title">Перфораторы</h3>
               <p class="promo-slider__paragraph">Настоящие мужские игрушки</p>
               <a class="button promo-slider__button" href="./catalog.html">Открыть каталог</a>
@@ -320,9 +325,9 @@
   
         <!-- Доступно скрытые радиокнопки -->
         <div class="slider-wrapper">
-          <input type="radio" name="toggle" id="slide-1" class="visually-hidden" checked>
-          <input type="radio" name="toggle" id="slide-2" class="visually-hidden">
-          <input type="radio" name="toggle" id="slide-3" class="visually-hidden">
+          <input class="visually-hidden slide-1" type="radio" name="toggle" id="slide-1" checked>
+          <input class="visually-hidden slide-2" type="radio" name="toggle" id="slide-2">
+          <input class="visually-hidden slide-3" type="radio" name="toggle" id="slide-3">
   
           <!-- Контролы в виде лейблов -->
           <div class="slider-controls">
@@ -389,7 +394,7 @@
           <a class="map__link" href="#">
             <img class="contact__map" src="./img/map-min.png" width="300" height="158" alt="Большая Конюшенная улица 19">
           </a>
-          <a class="button contact__button" href="./company.html">Заблудились? Напишите нам!</a>
+          <a class="button contact__button" href="#">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </main>
