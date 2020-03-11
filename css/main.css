@@ -865,6 +865,7 @@ h3 {
 .button--bookmark:active {
   color: rgba(50, 66, 92, 0.3);
 
+  background-color: #ffffff;
   border-color: rgba(50, 66, 92, 0.3);
 }
 
@@ -2198,6 +2199,16 @@ h3 {
   border: 1px solid #e5e5e5;
 }
 
+.filter-form__submit:hover,
+.filter-form__submit:focus {
+  background-color: #ffffff;
+  border-color: #bdc6ca;
+}
+
+.filter-form__submit:active {
+  background-color: #ffffff;
+  border-color: #ee3643;
+}
 
 /* Карта */
 
