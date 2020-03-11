@@ -1766,6 +1766,13 @@ h3 {
   background-image: url("../img/slider-image-hammer-drill.jpg");
 }
 
+.promo-slide-2::after {
+  content: "";
+
+  background-image: url("../img/slider-image-hammer-drill.jpg");
+  visibility: hidden;
+}
+
 .promo-slide-1:checked ~ .promo-slide-1 .indicator {
   background-color: red;
   border-color: white;
@@ -2045,17 +2052,6 @@ h3 {
   background-repeat: no-repeat;
 }
 
-.check__box::after {
-  content: "";
-
-  background-image: url("../img/checkbox-off--focused.svg"),
-  url("../img/checkbox-on.svg"),
-  url("../img/checkbox-on--focused.svg"),
-  url("../img/checkbox-off--disabled.svg"),
-  url("../img/checkbox-on--disabled.svg");
-  visibility: hidden;
-}
-
 .check:hover .check__box,
 .check__input:focus + .check__box {
   background-image: url("../img/checkbox-off--focused.svg");
@@ -2099,14 +2095,6 @@ h3 {
 
   background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
-}
-
-.radio__box::after {
-  content: "";
-
-  background-image: url("../img/radio-off.svg"),
-  url("../img/radio-on.svg");
-  visibility: hidden;
 }
 
 .radio__input:checked + .radio__box {
