@@ -152,10 +152,14 @@
             <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
               <fieldset class="filter-form__group">
                 <legend class="group-title">Цена:</legend>
-                <div class="slider"></div>
+                <div class="slider">
+                  <button class="slider__control slider__control--start" type="button"></button>
+                  <div class="slider__range"></div>
+                  <button class="slider__control slider__control--end" type="button"></button>
+                </div>
                 <div class="price-input__wrapper">
-                  <input class="filter-form__price-input" type="text">
-                  <input class="filter-form__price-input filter-form__price-input--till" type="text">
+                  <input class="filter-form__price-input" type="text" value="0">
+                  <input class="filter-form__price-input filter-form__price-input--till" type="text" value="30000">
                 </div>
               </fieldset>
               <fieldset class="filter-form__group">
@@ -187,7 +191,7 @@
                 </label>
               </fieldset>
               <fieldset class="filter-form__group">
-                <legend class="group-title">Питание:</legend>
+                <legend class="group-title group-title--price">Питание:</legend>
                 <label class="radio option">
                   <input class="radio__input visually-hidden" type="radio" name="power-supply" checked>
                   <span class="radio__box"></span>
