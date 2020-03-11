@@ -1762,15 +1762,15 @@ h3 {
   background-image: url("../img/slider-image-drill.jpg");
 }
 
-.promo-slide-2:checked ~ .promo-slider__list .promo-slide-2 {
-  background-image: url("../img/slider-image-hammer-drill.jpg");
-}
-
 .promo-slide-2::after {
   content: "";
 
   background-image: url("../img/slider-image-hammer-drill.jpg");
   visibility: hidden;
+}
+
+.promo-slide-2:checked ~ .promo-slider__list .promo-slide-2 {
+  background-image: url("../img/slider-image-hammer-drill.jpg");
 }
 
 .promo-slide-1:checked ~ .promo-slide-1 .indicator {
