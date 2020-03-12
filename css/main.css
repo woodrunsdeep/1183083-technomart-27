@@ -20,7 +20,6 @@ a {
 
 /* Стили заголовков */
 
-h2,
 .section__title {
   margin: 0;
 
@@ -32,14 +31,6 @@ h2,
 
 .section__title--colored {
   color: #32425c;
-}
-
-h3 {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 20px;
-  font-family: "PT Sans", Arial, sans-serif;
-  color: #000000;
 }
 
 .products__title {
@@ -364,7 +355,6 @@ h3 {
   font-style: normal;
   font-size: 21px;
   line-height: 21px;
-  vertical-align: middle;
   color: #ee3643;
   text-decoration: none;
 }
@@ -390,8 +380,6 @@ h3 {
 
   background: url("../img/icon-phone.svg") no-repeat;
 }
-
-
 
 .profile {
   display: flex;
@@ -516,6 +504,7 @@ h3 {
   font-size: 16px;
   line-height: 18px;
   font-family: "Cuprum", Arial, sans-serif;
+  vertical-align: middle;
   color: #32425c;
   text-decoration: none;
   font-stretch: normal;
@@ -830,6 +819,7 @@ h3 {
   font-size: 14px;
   line-height: 18px;
   font-family: "Cuprum", Arial, sans-serif;
+  vertical-align: middle;
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
@@ -900,6 +890,8 @@ h3 {
   width: 60px;
   height: 59px;
   overflow: hidden;
+
+  font-size: 0;
 }
 
 .promo__tag {
@@ -937,6 +929,7 @@ h3 {
   font-size: 13px;
   line-height: 18px;
   font-family: "PT Sans", Arial, sans-serif;
+  vertical-align: middle;
   text-align: center;
   color: #000000;
   text-transform: uppercase;
@@ -1019,6 +1012,8 @@ h3 {
   display: inline-block;
   width: 14px;
   height: 12px;
+
+  vertical-align: middle;
 
   background-image: url("../img/icon-home.svg");
   background-repeat: no-repeat;
@@ -1247,9 +1242,9 @@ h3 {
 
 /* Отображение слайдов при активном инпуте */
 
-.slide-1:checked ~ .slider-list #slide1,
-.slide-2:checked ~ .slider-list #slide2,
-.slide-3:checked ~ .slider-list #slide3 {
+.slide-1:checked ~ .slider-list .slide-1,
+.slide-2:checked ~ .slider-list .slide-2,
+.slide-3:checked ~ .slider-list .slide-3 {
   display: block;
 }
 
@@ -1331,7 +1326,7 @@ h3 {
   font-family: "PT Sans", Arial, sans-serif;
 }
 
-.map__image {
+.contact__map {
   margin-top: 11px;
 }
 
@@ -1454,6 +1449,10 @@ h3 {
 .footer__address {
   margin: 0;
   padding: 0;
+}
+
+.footer__phone {
+  color: #ffffff;
 }
 
 .footer__nav {
@@ -1613,12 +1612,15 @@ h3 {
 .sorting__title {
   flex-shrink: 0;
   width: 240px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   padding-left: 19px;
 
   font-weight: normal;
   font-size: 13px;
   line-height: 18px;
   font-family: "PT Sans", Arial, sans-serif;
+  text-transform: uppercase;
 }
 
 .sorting__list {
@@ -1633,6 +1635,8 @@ h3 {
 
 .sorting__item {
   flex-grow: 1;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .sorting__item--order {
@@ -1769,11 +1773,11 @@ h3 {
 }
 
 .promo-slide-1:checked ~ .promo-slider__list .promo-slide-1 {
-  background-image: url("../img/slider-image-drill.jpg");
+  background: #000000 url("../img/slider-image-drill.jpg") no-repeat center top;
 }
 
 .promo-slide-2:checked ~ .promo-slider__list .promo-slide-2 {
-  background-image: url("../img/slider-image-hammer-drill.jpg");
+  background: #000000 url("../img/slider-image-hammer-drill.jpg") no-repeat center top;
 }
 
 .promo-slide-1:checked ~ .promo-slide-1 .indicator {
@@ -1885,7 +1889,7 @@ h3 {
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   color: #ffffff;
 }
 
@@ -1934,7 +1938,7 @@ h3 {
 
   font-size: 14px;
   line-height: 18px;
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   color: #ffffff;
   text-transform: uppercase;
 
@@ -2012,7 +2016,6 @@ h3 {
   font-size: 13px;
   line-height: 18px;
   font-family: "PT Sans", Arial, sans-serif;
-  vertical-align: middle;
   color: #000000;
   text-transform: uppercase;
   letter-spacing: 0.4px;
@@ -2294,7 +2297,7 @@ h3 {
   top: 120px;
   left: 50%;
 
-  display: inline-block;
+  display: block;
   margin-left: -470px;
 
   font-size: 0;
@@ -2398,7 +2401,7 @@ h3 {
 
   font-size: 18px;
   line-height: 18px;
-  font-family: Cuprum;
+  font-family: "Cuprum", Arial, sans-serif;
 }
 
 .feedback-form__input {
