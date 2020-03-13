@@ -2049,7 +2049,8 @@ a {
   width: 20px;
   height: 20px;
 
-  background-color: #ffffff;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(171,171,171,1) 0%, rgba(171,171,171,1) 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 100%);
   border: none;
   border-radius: 50%;
   box-shadow: 0 2px 0 #e2e3de;
