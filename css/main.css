@@ -20,7 +20,7 @@ a {
 
 /* Стили заголовков */
 
-.section__title {
+.section-title {
   margin: 0;
 
   font-weight: normal;
@@ -29,7 +29,7 @@ a {
   text-transform: uppercase;
 }
 
-.section__title--colored {
+.section-title--colored {
   color: #32425c;
 }
 
@@ -657,12 +657,12 @@ a {
   background-color: #f2f6f8;;
 }
 
-.section__title {
+/* .section__title {
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
-}
+} */
 
 .products {
   display: flex;
@@ -782,7 +782,7 @@ a {
   width: 0;
   height: 0;
 
-  border: 19px solid white;
+  border: 19px solid #ffffff;
   border-left-color: #ee3643;
 }
 
@@ -1185,7 +1185,7 @@ a {
   line-height: 1.43;
   font-family: "Cuprum", Arial, sans-serif;
   text-align: left;
-  color: white;
+  color: #ffffff;
   letter-spacing: normal;
 
   background-color: #32425c;
@@ -1781,13 +1781,13 @@ a {
 }
 
 .promo-slide-1:checked ~ .promo-slide-1 .indicator {
-  background-color: red;
-  border-color: white;
+  background-color: #ee3643;
+  border-color: #ffffff;
 }
 
 .promo-slide-2:checked ~ .promo-slide-2 .indicator {
-  background-color: red;
-  border-color: white;
+  background-color: #ee3643;
+  border-color: #ffffff;
 }
 
 .promo-slider-controls__item {
@@ -2320,8 +2320,8 @@ a {
 
 .close-button {
   position: absolute;
-  top: 9px;
-  right: 9px;
+  top: 14px;
+  right: 8px;
 
   width: 25px;
   height: 25px;
@@ -2441,24 +2441,8 @@ a {
 
 .feedback-form__button {
   width: 100%;
-  min-height: 38px;
   margin-top: 37px;
   padding: 0;
-
-  font-size: 14px;
-  line-height: 18px;
-  font-family: "Cuprum", Arial, sans-serif;
-  color: #ffffff;
-  text-transform: uppercase;
-
-  background-color: #ee3643;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.feedback-form__close-button {
-  top: 16px;
 }
 
 /* Анимация формы обратной связи */
@@ -2521,8 +2505,84 @@ a {
   }
 }
 
-/* Сделать модальное окно добавления товара в корзину */
+/* Модальное окно добавления товара в корзину */
 
-.item-added {
+.added-to-cart {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 620px;
+  min-height: 282px;
+
+  font-family: "Cuprum", Arial, sans-serif;
+
+  box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75),
+  0 7px 0 0 #ee3643 inset;
+}
+
+.modal-message {
+  margin: 0;
+  margin-top: 75px;
+  margin-right: 125px;
+
+  font-size: 30px;
+  line-height: 30px;
+  text-align: right;
+}
+
+.modal-message::before {
+  content: "";
+  position: absolute;
+  top: 55px;
+  left: 81px;
+
+  width: 66px;
+  height: 66px;
+
+  background-image: url("https://htmlacademy-htmlcss.github.io/1183083-technomart-27/9/img/icon-modal-success.svg");
+}
+
+.added-to-cart__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 37px;
+  padding-right: 80px;
+  padding-bottom: 37px;
+  padding-left: 80px;
+
+  background-color: #f1f1f1;
+}
+
+.added-to-cart__button {
+  min-width: 220px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.added-to-cart__button:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+.close-modal-button {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.close-modal-button:hover,
+.close-modal-button:focus {
+  background-color: #ffffff;
+  border-color: #ee3643;
+}
+
+.added-to-cart {
   display: none;
+}
+
+.modal-windows__title {
+  font-size: 0;
 }
