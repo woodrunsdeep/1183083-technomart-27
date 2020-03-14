@@ -1902,6 +1902,7 @@ a {
 }
 
 .promo__item-title {
+  max-width: 150px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 3px;
@@ -1916,31 +1917,31 @@ a {
 .promo__item--materials {
   background-color: #ffbf47;
   background-image: url("../img/icon-bucket.svg");
-  background-position: bottom 27px right 43px;
+  background-position: center right 43px;
 }
 
 .promo__item--tools {
   background-color: #3bbce3;
   background-image: url("../img/icon-drill.svg");
-  background-position: bottom 29px right 28px;
+  background-position: center right 28px;
 }
 
 .promo__item--machinery {
   background-color: #dc91d8;
   background-image: url("../img/icon-bulldozer.svg");
-  background-position: bottom 30px right 31px;
+  background-position: center right 31px;
 }
 
 .promo__item--discounts {
   background-color: #8ed78f;
   background-image: url("../img/icon-discount-cart.svg");
-  background-position: bottom 25px right 45px;
+  background-position: center right 45px;
 }
 
 .promo__item--delivery {
   background-color: #ffc047;
   background-image: url("../img/icon-delivery-truck.svg");
-  background-position: bottom 28px right 31px;
+  background-position: center right 31px;
 }
 
 .promo__item-link {
