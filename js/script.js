@@ -122,6 +122,8 @@ buttons.forEach(function(el) {
         itemsQuantity++;
         itemsCounter.innerHTML = itemsQuantity;
         cart.classList.add("user-navigation__button--cart-non-empty");
+        var modalCheckoutButton = added.querySelector(".modal-checkout");
+        modalCheckoutButton.focus();
       });
 });
 
@@ -135,15 +137,6 @@ bookmarksButtons.forEach(function(el) {
         bookmarks.innerHTML = bookmarksCounter;
       });
 });
-
-// var buttons = document.querySelectorAll(".button--to-cart");
-
-// for (var button of buttons) {
-//   button.addEventListener('click', function(evt) {
-//     evt.preventDefault();
-// 		added.classList.add("added-to-cart--show");
-//   });
-// }
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
