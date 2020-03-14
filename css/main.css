@@ -802,7 +802,10 @@ a {
   opacity: 0;
 }
 
-.product:hover .action-buttons,
+.product:hover .action-buttons {
+  opacity: 1;
+}
+
 .product__visuals:focus-within .action-buttons {
   opacity: 1;
 }
