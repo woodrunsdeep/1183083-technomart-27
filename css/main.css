@@ -2526,13 +2526,15 @@ a {
 }
 
 .modal-message {
+  height: 170px;
   margin: 0;
-  margin-top: 75px;
-  margin-right: 125px;
+  padding-top: 75px;
+  /* margin-right: 125px; */
 
   font-size: 30px;
   line-height: 30px;
-  text-align: right;
+  text-align: center;
+  text-indent: 54px;
 }
 
 .modal-message::before {

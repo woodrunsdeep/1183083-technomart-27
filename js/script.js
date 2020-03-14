@@ -115,7 +115,6 @@ buttons.forEach(function(el) {
       });
 });
 
-
 // var buttons = document.querySelectorAll(".button--to-cart");
 
 // for (var button of buttons) {
