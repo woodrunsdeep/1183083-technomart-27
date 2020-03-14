@@ -2514,9 +2514,6 @@ a {
   left: 50%;
 
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
   width: 620px;
   min-height: 282px;
   margin-left: -310px;
@@ -2587,6 +2584,9 @@ a {
 
 .added-to-cart--show {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
 
   animation: bounce 0.6s;
 }
