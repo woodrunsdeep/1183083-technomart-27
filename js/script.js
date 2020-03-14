@@ -106,18 +106,24 @@ window.addEventListener("keydown", function (evt) {
 
 var added = document.querySelector(".added-to-cart");
 
-var buttons = document.querySelectorAll(".button--to-cart")
-for (var button of buttons) {
-  button.addEventListener('click', function(evt) {
-    evt.preventDefault();
-		added.classList.add("added-to-cart--show");
-  })
-}
+var buttons = Array.prototype.slice.call(document.querySelectorAll(".button--to-cart"));
 
-close.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  added.classList.remove("added-to-cart--show");
+buttons.forEach(function(el) {
+  el.addEventListener('click', function() {
+        // evt.preventDefault();
+    		added.classList.add("added-to-cart--show");
+      });
 });
+
+
+// var buttons = document.querySelectorAll(".button--to-cart");
+
+// for (var button of buttons) {
+//   button.addEventListener('click', function(evt) {
+//     evt.preventDefault();
+// 		added.classList.add("added-to-cart--show");
+//   });
+// }
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
@@ -132,3 +138,8 @@ proceedShopping.addEventListener("click", function (evt) {
   evt.preventDefault();
   added.classList.remove("added-to-cart--show");
 })
+
+close.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  added.classList.remove("added-to-cart--show");
+});
