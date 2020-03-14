@@ -2295,7 +2295,7 @@ a {
 
 .modal-map {
   position: fixed;
-  top: 120px;
+  top: calc(50vh - 223px);
   left: 50%;
 
   display: block;
@@ -2364,7 +2364,7 @@ a {
 
 .feedback-form {
   position: relative;
-  top: 120px;
+  top: calc(50vh - 215px);
   left: 50%;
 
   display: flex;
@@ -2510,7 +2510,7 @@ a {
 
 .added-to-cart {
   position: fixed;
-  top: 120px;
+  top: calc(50vh - 141px);
   left: 50%;
 
   display: none;
