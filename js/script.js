@@ -30,6 +30,12 @@ var feedbackForm = document.querySelector(".feedback-form");
 var isStorageSupport = true;
 var storage = "";
 
+var itemsInCart = (document.getElementById("itemsCounter")).innerHTML;
+
+var itemsQuantity = parseInt(itemsInCart);
+
+var cart = document.querySelector(".user-navigation__button--cart");
+
 try {
   storage = localStorage.getItem("username");
 } catch (err) {
@@ -112,8 +118,21 @@ var buttons = Array.prototype.slice.call(document.querySelectorAll(".button--to-
 
 buttons.forEach(function(el) {
   el.addEventListener('click', function() {
-        // evt.preventDefault();
-    		added.classList.add("added-to-cart--show");
+        added.classList.add("added-to-cart--show");
+        itemsQuantity++;
+        itemsCounter.innerHTML = itemsQuantity;
+        cart.classList.add("user-navigation__button--cart-non-empty");
+      });
+});
+
+var bookmarksButtons = Array.prototype.slice.call(document.querySelectorAll(".button--bookmark"));
+
+bookmarksButtons.forEach(function(el) {
+  el.addEventListener('click', function() {
+        var bookmarks = document.getElementById("bookmarksQuantity");
+        var bookmarksCounter = parseInt(bookmarks.innerHTML);
+        bookmarksCounter++;
+        bookmarks.innerHTML = bookmarksCounter;
       });
 });
 
