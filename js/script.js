@@ -46,18 +46,20 @@ if (feedbackLink !== null) {
   });
 }
 
-feedbackForm.addEventListener("submit", function(evt) {
-  if (!username.value || !email.value || !message.value) {
-    evt.preventDefault();
-    feedbackForm.classList.remove("modal-error");
-    feedbackForm.offsetWidth = feedbackForm.offsetWidth;
-    feedbackForm.classList.add("modal-error");
-  } else {
-      if (isStorageSupport) {
-        localStorage.setItem("username", username.value);
+if (feedbackForm !== null) {
+  feedbackForm.addEventListener("submit", function(evt) {
+    if (!username.value || !email.value || !message.value) {
+      evt.preventDefault();
+      feedbackForm.classList.remove("modal-error");
+      feedbackForm.offsetWidth = feedbackForm.offsetWidth;
+      feedbackForm.classList.add("modal-error");
+    } else {
+        if (isStorageSupport) {
+          localStorage.setItem("username", username.value);
+        }
       }
-    }
-});
+  });
+}
 
 if (mapLink !== null) {
   mapLink.addEventListener("click", function(evt) {
