@@ -71,6 +71,7 @@ modals.forEach(function(el) {
         closeModal.addEventListener("click", function(evt) {
             evt.preventDefault();
             el.classList.remove("modal-show");
+            // el.classList.remove("modal-error");
         });
 
         window.addEventListener("keydown", function (evt) {
@@ -78,6 +79,7 @@ modals.forEach(function(el) {
             evt.preventDefault();
             if (el.classList.contains("modal-show")) {
               el.classList.remove("modal-show");
+              // el.classList.remove("modal-error");
             }
           }
         });
