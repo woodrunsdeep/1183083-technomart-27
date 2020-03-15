@@ -1,38 +1,28 @@
-// var feedbackLink = document.querySelector(".contact__button"); 
-
-// if (feedbackLink !== null) {
-//   var feedbackForm = document.querySelector(".feedback-form");
-//   var close = feedbackForm.querySelector(".close-button");
-  
-//   var username = feedbackForm.querySelector("[name=username]");
-//   var email = feedbackForm.querySelector("[name=email]");
-//   var message = feedbackForm.querySelector("[name=message]");
-  
-//   feedbackLink.addEventListener("click", function(evt) {
-//       evt.preventDefault();
-//       feedbackForm.classList.add("modal-show");
-//       username.focus();
-//   });
-
-//   close.addEventListener("click", function(evt) {
-//       evt.preventDefault();
-//       feedbackForm.classList.remove("modal-show");
-//   });
-// }
-
-// feedbackForm.addEventListener("submit", )
-
 var feedbackLink = document.querySelector(".contact__button"); 
-
 var feedbackForm = document.querySelector(".feedback-form");
+
+var cart = document.querySelector(".user-navigation__button--cart");
+var itemsCounter = (document.getElementById("itemsCounter"));
+
+var bookmarksButtons = Array.prototype.slice.call(document.querySelectorAll(".button--bookmark"));
+
+var mapLink = document.querySelector(".map__link");
+var modalMap = document.querySelector(".modal-map");
+
+var modals = Array.prototype.slice.call(document.querySelectorAll(".modal"));
+
+var buttons = Array.prototype.slice.call(document.querySelectorAll(".button--to-cart"));
+
+var added = document.querySelector(".added-to-cart");
+
+var modalCheckoutButton = added.querySelector(".modal-checkout");
+
+var proceedShopping = added.querySelector(".close-modal-button");
 
 if (feedbackForm !== null) {
   var username = feedbackForm.querySelector("[name=username]");
-  
   var email = feedbackForm.querySelector("[name=email]");
-  
   var message = feedbackForm.querySelector("[name=message]");
-  
   var isStorageSupport = true;
   var storage = "";
   
@@ -56,17 +46,18 @@ if (feedbackLink !== null) {
   });
 }
 
-var itemsInCart = (document.getElementById("itemsCounter")).innerHTML;
-
-var itemsQuantity = parseInt(itemsInCart);
-
-var bookmarksButtons = Array.prototype.slice.call(document.querySelectorAll(".button--bookmark"));
-
-var cart = document.querySelector(".user-navigation__button--cart");
-
-var mapLink = document.querySelector(".map__link");
-
-var modalMap = document.querySelector(".modal-map");
+feedbackForm.addEventListener("submit", function(evt) {
+  if (!username.value || !email.value || !message.value) {
+    evt.preventDefault();
+    feedbackForm.classList.remove("modal-error");
+    feedbackForm.offsetWidth = feedbackForm.offsetWidth;
+    feedbackForm.classList.add("modal-error");
+  } else {
+      if (isStorageSupport) {
+        localStorage.setItem("username", username.value);
+      }
+    }
+});
 
 if (mapLink !== null) {
   mapLink.addEventListener("click", function(evt) {
@@ -74,8 +65,6 @@ if (mapLink !== null) {
     modalMap.classList.add("modal-show");
   });
 }
-
-var modals = Array.prototype.slice.call(document.querySelectorAll(".modal"));
 
 modals.forEach(function(el) {
         var closeModal = el.querySelector(".close-button");
@@ -94,10 +83,6 @@ modals.forEach(function(el) {
         });
 });
 
-var buttons = Array.prototype.slice.call(document.querySelectorAll(".button--to-cart"));
-
-var added = document.querySelector(".added-to-cart");
-
 /*  Обработчик событий на кнопки "Купить"  
       - появление
       - изменение кол-ва добавленных товаров
@@ -107,13 +92,9 @@ var added = document.querySelector(".added-to-cart");
 buttons.forEach(function(el) {
   el.addEventListener('click', function() {
     added.classList.add("modal-show");
-
-    // itemsQuantity++;
     itemsCounter.innerHTML++;
     cart.classList.add("user-navigation__button--cart-non-empty");
-    var modalCheckoutButton = added.querySelector(".modal-checkout");
     modalCheckoutButton.focus();
-    var proceedShopping = added.querySelector(".close-modal-button");
     proceedShopping.addEventListener("click", function (evt) {
       evt.preventDefault();
       added.classList.remove("modal-show");
@@ -124,8 +105,6 @@ buttons.forEach(function(el) {
 bookmarksButtons.forEach(function(el) {
   el.addEventListener('click', function() {
         var bookmarks = document.getElementById("bookmarksQuantity");
-        var bookmarksCounter = parseInt(bookmarks.innerHTML);
-        // bookmarksCounter++;
         bookmarks.innerHTML++;
       });
 });
