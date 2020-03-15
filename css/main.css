@@ -2612,6 +2612,8 @@ a {
 }
 
 .modal-windows__title {
+  height: 0;
+
   font-size: 0;
 }
 
