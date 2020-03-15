@@ -2024,6 +2024,7 @@ a {
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin-bottom: 21px;
   /* padding-bottom: 15px; */
@@ -2242,7 +2243,7 @@ a {
   padding-left: 10px;
 }
 
-.price-input__wrapper::before {
+/* .price-input__wrapper::before {
   content: "";
   position: absolute;
   top: 19px;
@@ -2250,6 +2251,16 @@ a {
 
   width: 9px;
   height: 1px;
+
+  background-color: #444444;
+} */
+
+.divider {
+  display: inline-block;
+  width: 9px;
+  height: 1px;
+
+  vertical-align: middle;
 
   background-color: #444444;
 }

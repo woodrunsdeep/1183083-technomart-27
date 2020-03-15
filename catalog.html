@@ -158,8 +158,11 @@
                   <button class="slider__control slider__control--end" type="button"></button>
                 </div>
                 <div class="price-input__wrapper">
-                  <input class="filter-form__price-input" type="text" name="price-start" value="0">
-                  <input class="filter-form__price-input filter-form__price-input--till" type="text" name="price-end" value="30000">
+                  <label for="price-start" class="visually-hidden">Минимальная цена</label>
+                  <input class="filter-form__price-input" id="price-start" type="text" name="price-start" value="0">
+                  <span class="divider"></span>
+                  <label for="price-end" class="visually-hidden">Максимальная цена</label>
+                  <input class="filter-form__price-input filter-form__price-input--till" id="price-end" type="text" name="price-end" value="30000">
                 </div>
               </fieldset>
               <fieldset class="filter-form__group">
