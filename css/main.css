@@ -2487,21 +2487,14 @@ a {
   }
 }
 
-.modal {
-  position: fixed;
 
-  display: none;
-}
 
-.modal-show {
+/* .modal-show {
   display: block;
 
   animation: bounce 0.6s;
-}
+} */
 
-.modal-error {
-  animation: shake 0.6s;
-}
 
 /* Анимация после ввода некорректных данных */
 
@@ -2527,6 +2520,7 @@ a {
   }
 }
 
+
 /* Модальное окно добавления товара в корзину */
 
 .added-to-cart {
@@ -2534,7 +2528,10 @@ a {
   top: calc(50vh - 141px);
   left: 50%;
 
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
   width: 620px;
   min-height: 282px;
   margin-left: -310px;
@@ -2618,8 +2615,18 @@ a {
   font-size: 0;
 }
 
+.modal {
+  position: fixed;
+
+  display: none;
+}
+
 .modal-show {
   display: block;
 
   animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }

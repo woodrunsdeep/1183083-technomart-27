@@ -1,158 +1,131 @@
+// var feedbackLink = document.querySelector(".contact__button"); 
+
+// if (feedbackLink !== null) {
+//   var feedbackForm = document.querySelector(".feedback-form");
+//   var close = feedbackForm.querySelector(".close-button");
+  
+//   var username = feedbackForm.querySelector("[name=username]");
+//   var email = feedbackForm.querySelector("[name=email]");
+//   var message = feedbackForm.querySelector("[name=message]");
+  
+//   feedbackLink.addEventListener("click", function(evt) {
+//       evt.preventDefault();
+//       feedbackForm.classList.add("modal-show");
+//       username.focus();
+//   });
+
+//   close.addEventListener("click", function(evt) {
+//       evt.preventDefault();
+//       feedbackForm.classList.remove("modal-show");
+//   });
+// }
+
+// feedbackForm.addEventListener("submit", )
+
 var feedbackLink = document.querySelector(".contact__button"); 
-
-var mapLink = document.querySelector(".map__link");
-
-var popup = document.querySelector(".feedback-form");
-
-var modalMap = document.querySelector(".modal-map");
-
-if (modalMap !== null) {
-  var mapClose = modalMap.querySelector(".close-button");
-} 
-
-if (added !== null) {
-  var added = document.querySelector(".added-to-cart");
-  var addedClose = added.querySelector(".close-button");
-}
-
-var close = document.querySelector(".close-button");
-
-var proceedShopping = document.querySelector(".close-modal-button");
-
-var username = document.querySelector("[name=username]");
-
-var email = document.querySelector("[name=email]");
-
-var message = document.querySelector("[name=message]");
 
 var feedbackForm = document.querySelector(".feedback-form");
 
-var isStorageSupport = true;
-var storage = "";
+if (feedbackForm !== null) {
+  var username = feedbackForm.querySelector("[name=username]");
+  
+  var email = feedbackForm.querySelector("[name=email]");
+  
+  var message = feedbackForm.querySelector("[name=message]");
+  
+  var isStorageSupport = true;
+  var storage = "";
+  
+  try {
+    storage = localStorage.getItem("username");
+  } catch (err) {
+    isStorageSupport = false;
+  }
+}
+
+if (feedbackLink !== null) {
+  feedbackLink.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    feedbackForm.classList.add("modal-show");
+
+    if (storage) {
+      username.value = storage;
+    } else {
+      username.focus();
+    }
+  });
+}
 
 var itemsInCart = (document.getElementById("itemsCounter")).innerHTML;
 
 var itemsQuantity = parseInt(itemsInCart);
 
+var bookmarksButtons = Array.prototype.slice.call(document.querySelectorAll(".button--bookmark"));
+
 var cart = document.querySelector(".user-navigation__button--cart");
 
-try {
-  storage = localStorage.getItem("username");
-} catch (err) {
-  isStorageSupport = false;
-}
+var mapLink = document.querySelector(".map__link");
 
+var modalMap = document.querySelector(".modal-map");
 
 if (mapLink !== null) {
   mapLink.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      modalMap.classList.add("modal-show");
+    evt.preventDefault();
+    modalMap.classList.add("modal-show");
   });
 }
 
-if (mapLink !== null) {
-  mapClose.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      modalMap.classList.remove("modal-show");
-  });
-}
+var modals = Array.prototype.slice.call(document.querySelectorAll(".modal"));
 
-window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      if (modalMap.classList.contains("modal-show")) {
-        modalMap.classList.remove("modal-show");
-      }
-    }
-  });
+modals.forEach(function(el) {
+        var closeModal = el.querySelector(".close-button");
+        closeModal.addEventListener("click", function(evt) {
+            evt.preventDefault();
+            el.classList.remove("modal-show");
+        });
 
-if (feedbackLink !== null) {
-  feedbackLink.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.add("modal-show");
-
-      if (storage) {
-          login.value = storage;
-      } else {
-          username.focus();
-      }
-
-  });
-}
-
-if (popup !== null) {
-  close.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.remove("modal-show");
-      popup.classList.remove("modal-error");
-  });
-}
-
-if (feedbackForm !== null) {
-  feedbackForm.addEventListener("submit", function(evt) {
-      if (!username.value || !email.value || !message.value) {
-          evt.preventDefault();
-          popup.classList.remove("modal-error");
-          popup.offsetWidth = popup.offsetWidth;
-          popup.classList.add("modal-error");
-      } else {
-          if (isStorageSupport) {
-              localStorage.setItem("username", username.value);
+        window.addEventListener("keydown", function (evt) {
+          if (evt.keyCode === 27) {
+            evt.preventDefault();
+            if (el.classList.contains("modal-show")) {
+              el.classList.remove("modal-show");
+            }
           }
-      }
-
-  });
-}
-
-window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      if (popup.classList.contains("modal-show")) {
-        popup.classList.remove("modal-show");
-        popup.classList.remove("modal-error");
-      }
-    }
-  });
+        });
+});
 
 var buttons = Array.prototype.slice.call(document.querySelectorAll(".button--to-cart"));
 
+var added = document.querySelector(".added-to-cart");
+
+/*  Обработчик событий на кнопки "Купить"  
+      - появление
+      - изменение кол-ва добавленных товаров
+      - изменение цвета кнопки "Корзина"
+      - фокус на кнопке "Оформить заказ"  */
+
 buttons.forEach(function(el) {
   el.addEventListener('click', function() {
-        added.classList.add("added-to-cart--show");
-        itemsQuantity++;
-        itemsCounter.innerHTML = itemsQuantity;
-        cart.classList.add("user-navigation__button--cart-non-empty");
-        var modalCheckoutButton = added.querySelector(".modal-checkout");
-        modalCheckoutButton.focus();
-      });
-});
+    added.classList.add("modal-show");
 
-var bookmarksButtons = Array.prototype.slice.call(document.querySelectorAll(".button--bookmark"));
+    // itemsQuantity++;
+    itemsCounter.innerHTML++;
+    cart.classList.add("user-navigation__button--cart-non-empty");
+    var modalCheckoutButton = added.querySelector(".modal-checkout");
+    modalCheckoutButton.focus();
+    var proceedShopping = added.querySelector(".close-modal-button");
+    proceedShopping.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      added.classList.remove("modal-show");
+    });
+  });
+});
 
 bookmarksButtons.forEach(function(el) {
   el.addEventListener('click', function() {
         var bookmarks = document.getElementById("bookmarksQuantity");
         var bookmarksCounter = parseInt(bookmarks.innerHTML);
-        bookmarksCounter++;
-        bookmarks.innerHTML = bookmarksCounter;
+        // bookmarksCounter++;
+        bookmarks.innerHTML++;
       });
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    if (added.classList.contains("added-to-cart--show")) {
-      added.classList.remove("added-to-cart--show");
-    }
-  }
-});
-
-proceedShopping.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  added.classList.remove("added-to-cart--show");
-})
-
-addedClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  added.classList.remove("added-to-cart--show");
 });
