@@ -2023,7 +2023,7 @@ a {
   position: relative;
 
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   width: 100%;
   margin-bottom: 21px;
@@ -2259,6 +2259,8 @@ a {
   display: inline-block;
   width: 9px;
   height: 1px;
+  margin-right: auto;
+  margin-left: auto;
 
   vertical-align: middle;
 
