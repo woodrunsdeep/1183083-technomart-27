@@ -2256,13 +2256,12 @@ a {
 } */
 
 .divider {
-  display: inline-block;
+  /* display: inline-block; */
   width: 9px;
   height: 1px;
   margin-right: auto;
   margin-left: auto;
-
-  vertical-align: middle;
+  /* vertical-align: middle; */
 
   background-color: #444444;
 }
