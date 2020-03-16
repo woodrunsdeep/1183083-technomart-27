@@ -79,19 +79,31 @@ img {
 
 .logo {
   display: flex;
-  width: 100%;
-  height: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 42px;
+  margin-right: 20px;
 
   background-color: #ee3643;
   box-shadow: 0 5px 0 0 #b52933;
 }
 
-.logo__image {
-  margin: auto;
-
-  font-size: 0;
-  line-height: 0;
+.header__logo .logo__image {
+  width: 109px;
+  height: 19px;
 }
+
+.footer__logo {
+  height: 63px;
+  margin-bottom: 32px;
+}
+
+.footer__logo .logo__image {
+  width: 138px;
+  height: 24px;
+}
+
 
 .logo:hover,
 .logo:focus {
@@ -1453,11 +1465,10 @@ img {
   background-color: #293449;
 }
 
-.footer__logo {
+/* .footer__logo {
   width: 220px;
   height: 63px;
-  margin-bottom: 32px;
-}
+} */
 
 .footer__address {
   margin: 0;
