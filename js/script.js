@@ -69,29 +69,30 @@ if (mapLink !== null) {
 }
 
 modals.forEach(function(el) {
-        var closeModal = el.querySelector(".close-button");
-        closeModal.addEventListener("click", function(evt) {
-            evt.preventDefault();
-            el.classList.remove("modal-show");
-            el.classList.remove("modal-error");
-        });
+  var closeModal = el.querySelector(".close-button");
+  closeModal.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    el.classList.remove("modal-show");
+    el.classList.remove("modal-error");
+  });
 
-        window.addEventListener("keydown", function (evt) {
-          if (evt.keyCode === 27) {
-            evt.preventDefault();
-            if (el.classList.contains("modal-show")) {
-              el.classList.remove("modal-show");
-              el.classList.remove("modal-error");
-            }
-          }
-        });
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (el.classList.contains("modal-show")) {
+        el.classList.remove("modal-show");
+        el.classList.remove("modal-error");
+      }
+    }
+  });
 });
 
-/*  Обработчик событий на кнопки "Купить"  
+/* Обработчик событий на кнопки "Купить"  
       - появление
       - изменение кол-ва добавленных товаров
       - изменение цвета кнопки "Корзина"
-      - фокус на кнопке "Оформить заказ"  */
+      - фокус на кнопке "Оформить заказ"
+      - закрытие окна по нажатию "Продолжить покупки" */
 
 buttons.forEach(function(el) {
   el.addEventListener('click', function() {
@@ -108,7 +109,7 @@ buttons.forEach(function(el) {
 
 bookmarksButtons.forEach(function(el) {
   el.addEventListener('click', function() {
-        var bookmarks = document.getElementById("bookmarksQuantity");
-        bookmarks.innerHTML++;
-      });
+    var bookmarks = document.getElementById("bookmarksQuantity");
+    bookmarks.innerHTML++;
+  });
 });
