@@ -83,7 +83,6 @@ img {
   align-items: center;
   width: 220px;
   height: 42px;
-  margin-right: 20px;
 
   background-color: #ee3643;
   box-shadow: 0 5px 0 0 #b52933;
@@ -1355,7 +1354,7 @@ img {
 .contact__button {
   width: 100%;
   /* align-self: stretch; */
-  margin-top: 36px;
+  margin-top: 40px;
 }
 
 .about-product {
@@ -2596,7 +2595,7 @@ img {
   width: 66px;
   height: 66px;
 
-  background-image: url("https://htmlacademy-htmlcss.github.io/1183083-technomart-27/9/img/icon-modal-success.svg");
+  background-image: url("../img/icon-modal-success.svg");
 }
 
 .added-to-cart__buttons {
