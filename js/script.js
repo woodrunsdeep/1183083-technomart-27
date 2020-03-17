@@ -95,7 +95,7 @@ modals.forEach(function(el) {
       - закрытие окна по нажатию "Продолжить покупки" */
 
 buttons.forEach(function(el) {
-  el.addEventListener('click', function() {
+  el.addEventListener("click", function() {
     added.classList.add("modal-show");
     itemsCounter.innerHTML++;
     cart.classList.add("user-navigation__button--cart-non-empty");
@@ -108,7 +108,7 @@ buttons.forEach(function(el) {
 });
 
 bookmarksButtons.forEach(function(el) {
-  el.addEventListener('click', function() {
+  el.addEventListener("click", function() {
     var bookmarks = document.getElementById("bookmarksQuantity");
     bookmarks.innerHTML++;
   });
