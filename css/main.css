@@ -1126,8 +1126,7 @@ img {
   box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
-.brands__link:active,
-.brands__link:active .brands__image {
+.brands__link:active {
   box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
   opacity: 0.3;
 }
