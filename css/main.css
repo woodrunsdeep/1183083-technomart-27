@@ -1165,6 +1165,9 @@ img {
 }
 
 .services__paragraph {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
   margin-bottom: 24px;
 
   font-size: 13px;
@@ -1307,6 +1310,8 @@ img {
 }
 
 .about-us__paragraph {
+  display: flex;
+  flex-direction: column;
   margin-top: 24px;
   margin-bottom: 20px;
 
@@ -1344,6 +1349,8 @@ img {
 }
 
 .contact__paragraph {
+  display: flex;
+  flex-direction: column;
   margin-top: 24px;
   margin-bottom: 20px;
 
@@ -1417,17 +1424,21 @@ img {
   padding-left: 1px;
 }
 
-.footer__copyright {
+.footer__paragraph {
   display: flex;
-  justify-content: space-between;
-  min-width: 270px;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 }
 
-.footer__links-block {
+.footer__links {
   display: flex;
+  justify-content: space-between;
   min-width: 284px;
+}
+
+.footer__paragraph--copyright {
+  min-width: 270px;
 }
 
 .footer__feedback {
