@@ -46,7 +46,7 @@
       </div>
       <div class="wrapper">
         <div class="header__middle">
-          <p class="header__site-description">Интернет-магазин строительных материалов<br> и инструментов для ремонта</p>
+          <p class="header__site-description">Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</p>
           <ul class="header__contacts">
             <li class="header__contacts-item header__contacts-item--box">
               <a class="header__phone" href="tel:78125550555">+7 (812) 555-05-55</a>
@@ -143,9 +143,17 @@
               <fieldset class="filter-form__group">
                 <legend class="group-title">Цена:</legend>
                 <div class="slider">
-                  <button class="slider__control slider__control--start" type="button"></button>
+                  <button class="slider__control slider__control--start" type="button">
+                    <span class="visually-hidden">
+                      Минимальная цена
+                    </span>
+                  </button>
                   <div class="slider__range"></div>
-                  <button class="slider__control slider__control--end" type="button"></button>
+                  <button class="slider__control slider__control--end" type="button">
+                    <span class="visually-hidden">
+                      Максимальная цена
+                    </span>
+                  </button>
                 </div>
                 <div class="price-input__wrapper">
                   <label for="price-start" class="visually-hidden">Минимальная цена</label>
@@ -215,14 +223,16 @@
               </ul>
               <ul class="sorting-order">
                 <li class="sorting__item--order">
-                  <a class="sorting__property--order-ascending" href="#">
+                  <a href="#">
+                    <span class="visually-hidden">От меньшего к большему</span>
                     <svg class="order order--current" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" focusable="false">
                       <path d="M5.5 0L0 10h11z"/>
                   </svg>
                   </a>
                 </li>
                 <li class="sorting__item--order">
-                  <a class="sorting__property--order-descending" href="#">
+                  <a href="#">
+                    <span class="visually-hidden">От большего к меньшему</span>
                     <svg class="order order-descending" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" focusable="false">
                       <path d="M5.5 0L0 10h11z"/>
                     </svg>
