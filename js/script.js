@@ -130,12 +130,12 @@ function showBtn(product) {
   
   actionButtons.forEach(function(el) {
     el.addEventListener("focus", function(evt) {
-      productImage.style.opacity="0";
-      buttonWrapper.style.opacity="1";
+      productImage.classList.add("product__image--hidden");
+      buttonWrapper.classList.add("action-buttons--show");
     });
     el.addEventListener("blur", function(evt) {
-      productImage.style.opacity="1";
-      buttonWrapper.style.opacity="0";
+      productImage.classList.remove("product__image--hidden");
+      buttonWrapper.classList.remove("action-buttons--show");
     });
   });
 }

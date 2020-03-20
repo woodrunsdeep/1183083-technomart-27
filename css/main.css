@@ -733,6 +733,10 @@ img {
   height: auto;
 }
 
+.product__image--hidden {
+  opacity: 0;
+}
+
 .product__title {
   margin-top: 9px;
   margin-bottom: 9px;
@@ -1300,7 +1304,7 @@ img {
   width: 640px;
   min-height: 536px;
   padding-top: 79px;
-  padding-right: 120px;
+  padding-right: 40px;
   padding-bottom: 40px;
 }
 
