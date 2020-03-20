@@ -826,6 +826,10 @@ img {
   opacity: 0;
 }
 
+.action-buttons--show {
+  opacity: 1;
+}
+
 .product:hover .action-buttons {
   opacity: 1;
 }
