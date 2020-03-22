@@ -1244,11 +1244,11 @@ img {
   background-position: bottom right;
 }
 
-.slide {
+.service-slide {
   display: none;
 }
 
-.slide__title {
+.service-slide__title {
   margin-top: 30px;
   margin-bottom: 25px;
 
@@ -1386,6 +1386,8 @@ img {
 
 .about-product__title {
   margin-bottom: 26px;
+
+  word-spacing: 1px;
 }
 
 .about-product__paragraph {
@@ -1395,6 +1397,7 @@ img {
 
   line-height: 24px;
   font-family: "PT Sans", Arial, sans-serif;
+  word-spacing: 40%;
 }
 
 /* Футер */
@@ -1741,15 +1744,13 @@ img {
   border-bottom: none;
 }
 
-.promo-slider {
+/* .promo-slider {
   position: absolute;
   top: 202px;
   left: 0;
 
   width: 620px;
   height: 266px;
-
-  /* background-color: tomato; */
 }
 
 .promo-slider__list {
@@ -1759,7 +1760,6 @@ img {
 }
 
 .promo-slider__item {
-  display: none;
   width: 100%;
   height: 100%;
 
@@ -1769,15 +1769,26 @@ img {
   background-position: 0 0;
 }
 
+.promo-slider__controls {
+  position: absolute;
+  top: 222px;
+}
+
 .promo-slide {
+  position: absolute;
+
+  display: none;
   padding-top: 22px;
   padding-left: 25px;
 }
 
-.promo-slider__title {
+.promo-slide--current {
+  display: block;
+}
+
+.promo-slide__title {
   margin-top: 0;
   margin-bottom: 2px;
-  /* font-weight: normal; */
 
   font-size: 36px;
   line-height: 1;
@@ -1786,7 +1797,7 @@ img {
   text-transform: uppercase;
 }
 
-.promo-slider__paragraph {
+.promo-slide__paragraph {
   margin: 0;
 
   font-style: normal;
@@ -1799,11 +1810,9 @@ img {
   letter-spacing: normal;
 }
 
-.promo-slider__button {
+.promo-slide__button {
   position: absolute;
   bottom: 22px;
-
-  /* min-width: 195px; */
 }
 
 .promo-slide-2::after {
@@ -1814,18 +1823,18 @@ img {
 
   background-image: url("../img/slider-image-hammer-drill.jpg");
   visibility: hidden;
-}
+} */
 
-.promo-slide-1:checked ~ .promo-slider__list .promo-slide-1,
+/* .promo-slide-1:checked ~ .promo-slider__list .promo-slide-1,
 .promo-slide-2:checked ~ .promo-slider__list .promo-slide-2 {
   display: block;
-}
+} */
 
-.promo-slide-1:checked ~ .promo-slider__list .promo-slide-1 {
+/* .promo-slider__list .promo-slide-1 {
   background: #000000 url("../img/slider-image-drill.jpg") no-repeat center top;
 }
 
-.promo-slide-2:checked ~ .promo-slider__list .promo-slide-2 {
+.promo-slider__list .promo-slide-2 {
   background: #000000 url("../img/slider-image-hammer-drill.jpg") no-repeat center top;
 }
 
@@ -1839,18 +1848,63 @@ img {
   border-color: #ffffff;
 }
 
-.promo-slider-controls__item {
+.promo-slider__controls {
+  position: absolute;
+  top: 50%;
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 25px;
+
+  transform: translateY(-19px);
+}
+
+.arrow-button {
+  width: 22px;
+  height: 40px;
+  padding: 0;
+
+  font-size: 0;
+
+  background-color: transparent;
+  background-image: url("../img/icon-arrow.svg");
+  border: none;
+  cursor: pointer;
+}
+
+.arrow-button--next {
+  transform: rotate(180deg);
+}
+
+.arrow-button:focus {
+  outline: 2px solid #ee3643;
+  outline-offset: 2px;
+} */
+
+/* .promo-slider-controls__item {
   position: absolute;
   top: 50%;
 
   width: 22px;
   height: 40px;
+  padding: 0;
 
+  font-size: 0;
+
+  background-color: transparent;
   background-image: url("../img/icon-arrow.svg");
+  border: none;
   cursor: pointer;
-}
+} */
 
-.previous {
+/* .promo-slider-controls__item:focus {
+  outline: 2px solid #ee3643;
+  outline-offset: 2px;
+} */
+
+/* .previous {
   left: 25px;
 
   transform: translateY(-19px);
@@ -1860,9 +1914,42 @@ img {
   right: 20px;
 
   transform: translateY(-19px) rotate(180deg);
+} */
+
+/* .radio-buttons {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+
+  display: flex;
+
+  transform: translateX(-15px);
 }
 
-.indicator {
+.radio-button {
+  display: flex;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+
+  background-color: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.radio-1:checked ~ label[for="one"],
+.radio-2:checked ~ label[for="two"] {
+  background-color: #ee3643;
+  border-color: #ffffff;
+}
+
+.radio-1:focus ~ label[for="one"],
+.radio-2:focus ~ label[for="two"] {
+  box-shadow: 0 0 3px 3px #4d90fe;
+} */
+
+/* .indicator {
   position: absolute;
   bottom: 36px;
   left: 295px;
@@ -1874,11 +1961,16 @@ img {
   border: 2px solid transparent;
   border-radius: 50%;
   cursor: pointer;
-}
+} */
 
-.indicator--current {
+/* .indicator--second {
   left: 315px;
 }
+
+.indicator:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px  #4d90fe;
+} */
 
 /* Промо-блок */
 
@@ -2675,4 +2767,163 @@ img {
 
 .modal-error {
   animation: shake 0.6s;
+}
+
+/* Переработанный слайдер */
+
+.carousel {
+  position: absolute;
+  top: 202px;
+  left: 0;
+
+  width: 620px;
+  height: 266px;
+  margin: 0 auto;
+}
+
+.carousel__image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.carousel__track-container {
+  position: relative;
+  /*   padding: 10px; */
+
+  height: 100%;
+  overflow: hidden;
+
+  background-color: lightgreen;
+}
+
+.carousel__track {
+  position: relative;
+
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  width: 100%;
+
+  background-color: #000000;
+}
+
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+
+  width: 22px;
+  height: 40px;
+  padding: 0;
+
+  font-size: 0;
+
+  background-color: transparent;
+  background-image: url("https://woodrunsdeep.github.io/1183083-technomart-27/img/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.carousel__button:focus {
+  outline: 2px solid #ee3643;
+  outline-offset: 5px;
+}
+
+.carousel__link {
+  position: absolute;
+  bottom: 22px;
+  left: 25px;
+}
+
+.carousel__button--previous {
+  left: 25px;
+}
+
+.slide__content {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 22px;
+  padding-left: 25px;
+
+  color: #ffffff;
+}
+
+.slide__title {
+  margin-top: 22px;
+  margin-bottom: 3px;
+
+  font-size: 36px;
+  line-height: 1;
+  font-family: "Cuprum", Arial, sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.slide__paragraph {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 1.33;
+  font-family: "Cuprum", Arial, sans-serif;
+  color: #ffffff;
+}
+
+.carousel__button--next {
+  right: 20px;
+
+  transform: rotate(180deg) translateY(50%);
+}
+
+.carousel__nav {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+
+  transform: translateX(-50%);
+}
+
+.carousel__indicator {
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 0;
+
+  background-color: #ffffff;
+  border: 0;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel__indicator.current-slide {
+  background-color: #ee3643;
+  border-color: #ffffff;
+}
+
+.is-hidden {
+  display: none;
 }

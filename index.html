@@ -124,32 +124,87 @@
             <a class="promo__item-link" href="#">Бесплатно</a>
           </li>
         </ul>
-        <div class="promo-slider">
-          <input class="promo-slide-1 visually-hidden" type="radio" name="promo-toggle" id="promo-slide-1" checked>
-          <input class="promo-slide-2 visually-hidden" type="radio" name="promo-toggle" id="promo-slide-2">
+        <div class="carousel">
+
+          <button class="carousel__button carousel__button--previous" disabled>Предыдущий слайд</button>
+          <button class="carousel__button carousel__button--next">Следующий слайд</button>
+      
+          <div class="carousel__nav">
+              <button class="carousel__indicator current-slide"></button>
+              <button class="carousel__indicator"></button>
+            </div>
+      
+          <div class="carousel__track-container">
+            <ul class="carousel__track">
+                
+              <li class="carousel__slide slide current-slide">
+                <div class="slide__content">
+                  <h3 class="slide__title">Дрели</h3>
+                  <p class="slide__paragraph">Соседям на радость!</p>
+                </div>
+                <img class="carousel__image" src="https://woodrunsdeep.github.io/1183083-technomart-27/img/slider-image-drill.jpg">
+              </li>
+      
+              <li class="carousel__slide slide">
+                <div class="slide__content">
+                  <h3 class="slide__title">Перфораторы</h3>
+                  <p class="slide__paragraph">Настоящие мужские игрушки</p>
+                </div>
+                <img class="carousel__image" src="https://woodrunsdeep.github.io/1183083-technomart-27/img/slider-image-hammer-drill.jpg">
+              </li>
+      
+            </ul>
+          </div>
+          <a class="button button--middle carousel__link" href="./catalog.html">Открыть каталог</a>
+      
+        </div>
+        <!-- <div class="promo-slider">
+
+          <ul class="promo-slider__list">
+
+            <li class="promo-slider__item promo-slide promo-slide--current promo-slide-1">
+              <h3 class="promo-slide__title">Дрели</h3>
+              <p class="promo-slide__paragraph">Соседям на радость!</p>
+              <a class="button button--middle promo-slide__button" href="./catalog.html">Открыть каталог</a>
+            </li>
+
+            <li class="promo-slider__item promo-slide promo-slide-2">
+              <h3 class="promo-slide__title">Перфораторы</h3>
+              <p class="promo-slide__paragraph">Настоящие мужские игрушки</p>
+              <a class="button button--middle promo-slide__button" href="./catalog.html">Открыть каталог</a>
+            </li>
+
+          </ul>
+          
+          <div class="promo-slider__controls">
+            <button class="arrow-button arrow-button--previous"></button>
+            <button class="arrow-button arrow-button--next"></button>            
+          </div>
+          
+          <div class="radio-buttons">
+            <input class="radio-1 visually-hidden" type="radio" name="one" id="one" checked>
+            <input class="radio-2 visually-hidden" type="radio" name="one" id="two">
+            <label class="radio-button" for="one"></label>
+            <label class="radio-button" for="two"></label>
+            <label for="two"></label>
+            <button></button>
+            <button class="radio-button"></button>
+          </div>
+          <input class="promo-slide-1 indicator" type="radio" name="promo-toggle" id="promo-slide-1" checked>
+          <input class="promo-slide-2 indicator indicator--second" type="radio" name="promo-toggle" id="promo-slide-2">
+          <button class="promo-slider-controls__item previous" type="button">Предыдущий слайд</button>
+          <button class="promo-slider-controls__item next">Следующий слайд</button>
+          
           <label class="promo-slide-1" for="promo-slide-1">
-            <span class="visually-hidden">Назад</span>
-            <span class="promo-slider-controls__item previous"></span>
+            <span class="visually-hidden">Слайд - Дрели</span>
             <span class="indicator"></span>
           </label>
           <label class="promo-slide-2" for="promo-slide-2">
-            <span class="visually-hidden">Вперед</span>
-            <span class="promo-slider-controls__item next"></span>
-            <span class="indicator indicator--current"></span>
+            <span class="visually-hidden">Слайд - Перфораторы</span>
+            <span class="indicator indicator--second"></span>
           </label>
-          <ul class="promo-slider__list">
-            <li class="promo-slider__item promo-slide promo-slide-1">
-              <h3 class="promo-slider__title">Дрели</h3>
-              <p class="promo-slider__paragraph">Соседям на радость!</p>
-              <a class="button button--middle promo-slider__button" href="./catalog.html">Открыть каталог</a>
-            </li>
-            <li class="promo-slider__item promo-slide promo-slide-2">
-              <h3 class="promo-slider__title">Перфораторы</h3>
-              <p class="promo-slider__paragraph">Настоящие мужские игрушки</p>
-              <a class="button button--middle promo-slider__button" href="./catalog.html">Открыть каталог</a>
-            </li>
-          </ul>
-        </div>
+
+        </div> -->
       </section>
       <section class="popular-products">
         <div class="section__wrapper">
@@ -304,8 +359,8 @@
           </div>
           <!-- Список слайдов -->
           <ul class="slider-list">
-            <li class="slider-list__item slide slide-1">
-              <h3 class="slide__title">Доставка</h3>
+            <li class="slider-list__item service-slide slide-1">
+              <h3 class="service-slide__title">Доставка</h3>
               <p class="services__paragraph">
                 Мы с удовольствием доставим ваш товар прямо<br> 
                 к вашему подъезду совершенно бесплатно!
@@ -313,8 +368,8 @@
                 поднимая его на ваш этаж!
               </p>
             </li>
-            <li class="slider-list__item slide slide-2">
-              <h3 class="slide__title">Гарантия</h3>
+            <li class="slider-list__item service-slide slide-2">
+              <h3 class="service-slide__title">Гарантия</h3>
               <p class="services__paragraph">
                 Если купленный у нас товар поломается или заискрит,<br>
                 а также в случае пожара, спровоцированного его возгоранием,
@@ -323,8 +378,8 @@
                 Дом уж восстановите как-нибудь сами.
               </p>
             </li>
-            <li class="slider-list__item slide slide-3">
-              <h3 class="slide__title">Кредит</h3>
+            <li class="slider-list__item service-slide slide-3">
+              <h3 class="service-slide__title">Кредит</h3>
               <p class="services__paragraph">
                 Залезть в долговую яму стало проще!<br>
                 Кредитные консультанты придут вам на помощь.
@@ -442,15 +497,15 @@
               </a>
             </li>
           </ul>
-            <div class="footer__links">
-              <p class="footer__paragraph">
-                <span>Обратная связь:</span>
-                <a class="feedback__link" href="mailto:mail@htmlacademy.ru" target="_blank">mail@htmlacademy.ru</a></p>
-              <p class="footer__paragraph">
-                <span>Разработано —</span>
-                <a class="feedback__copyright-link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a>
-              </p>
-            </div>
+          <div class="footer__links">
+            <p class="footer__paragraph">
+              <span>Обратная связь:</span>
+              <a class="feedback__link" href="mailto:mail@htmlacademy.ru" target="_blank">mail@htmlacademy.ru</a></p>
+            <p class="footer__paragraph">
+              <span>Разработано —</span>
+              <a class="feedback__copyright-link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
@@ -510,5 +565,6 @@
         </div>
     </section>
     <script src="./js/script.js"></script>
+    <!-- <script src="./js/slider-script.js"></script> -->
   </body>
 </html>

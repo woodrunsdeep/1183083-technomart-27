@@ -143,3 +143,126 @@ function showBtn(product) {
 for (var i = 0; i < products.length; i++) {
   showBtn(products[i]);
 }
+
+const track = document.querySelector(".carousel__track");
+const slides = Array.prototype.slice.call(document.querySelectorAll(".carousel__slide"));
+
+const nextButton = document.querySelector(".carousel__button--next");
+const prevButton = document.querySelector(".carousel__button--previous");
+
+const dotsNav = document.querySelector(".carousel__nav");
+const dots = Array.prototype.slice.call(document.querySelectorAll(".carousel__indicator"));
+
+const slideWidth = slides[0].getBoundingClientRect().width;
+const setSlidePosition = (slide, index) => {
+    slide.style.left = slideWidth * index + "px";
+};
+
+slides.forEach(setSlidePosition);
+
+const moveToSlide = (track, currentSlide, targetSlide) => {
+  track.style.transform = "translateX(-" + targetSlide.style.left + ")";
+  currentSlide.classList.remove("current-slide");
+  targetSlide.classList.add("current-slide");
+};
+
+const updateDots = (currentDot, targetDot) => {
+  currentDot.classList.remove("current-slide");
+  targetDot.classList.add("current-slide");
+};
+
+const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
+  if (targetIndex === 0) {
+    prevButton.setAttribute("disabled", "");
+    nextButton.removeAttribute("disabled", "");
+  } else if (targetIndex === slides.length - 1) {
+    prevButton.removeAttribute("disabled", "");
+    nextButton.setAttribute("disabled", "");
+  } else {
+    prevButton.removeAttribute("disabled", "");
+    nextButton.removeAttribute("disabled", "");
+  }
+};
+
+prevButton.addEventListener("click", e => {
+  const currentSlide = track.querySelector(".current-slide");
+  const prevSlide = currentSlide.previousElementSibling;
+  const currentDot = dotsNav.querySelector(".current-slide");
+  const prevDot = currentDot.previousElementSibling;
+  const prevIndex = slides.findIndex(slide => slide === prevSlide);
+
+  moveToSlide(track, currentSlide, prevSlide);
+  updateDots(currentDot, prevDot);
+  hideShowArrows(slides, prevButton, nextButton, prevIndex);
+});
+
+nextButton.addEventListener("click", e => {
+  const currentSlide = track.querySelector(".current-slide");
+  const nextSlide = currentSlide.nextElementSibling;
+  const currentDot = dotsNav.querySelector(".current-slide");
+  const nextDot = currentDot.nextElementSibling;
+  const nextIndex = slides.findIndex(slide => slide === nextSlide);
+  moveToSlide(track, currentSlide, nextSlide);
+  updateDots(currentDot, nextDot);
+  hideShowArrows(slides, prevButton, nextButton, nextIndex);
+});
+
+dotsNav.addEventListener("click", e => {
+  const targetDot = e.target.closest("button");
+
+  if (!targetDot) return;
+
+  const currentSlide = track.querySelector(".current-slide");
+  const currentDot = dotsNav.querySelector(".current-slide");
+  const targetIndex = dots.findIndex(dot => dot === targetDot);
+  const targetSlide = slides[targetIndex];
+
+  moveToSlide(track, currentSlide, targetSlide);
+  updateDots(currentDot, targetDot);
+  hideShowArrows(slides, prevButton, nextButton, targetIndex);
+});
+
+
+// var promoSliderButtons = Array.prototype.slice.call(document.querySelectorAll(".promo-slider-controls__item"));
+// var slides = Array.prototype.slice.call(document.querySelectorAll(".promo-slide"));
+
+// var slide1 = document.querySelector(".promo-slider__list .promo-slide-1");
+
+// var slide2 = document.querySelector(".promo-slider__list .promo-slide-2");
+
+// promoSliderButtons.forEach(function(el) {
+//   el.addEventListener("click", function(evt) {
+//     evt.preventDefault();
+//     if (el.classList.contains("previous")) {
+//       console.log("prev");
+//       slide2.classList.toggle("promo-slide--no-show");
+//       slide1.classList.toggle("promo-slide--show");
+//       // slides[1].classList.remove("promo-slide--show");
+//       // slides[0].classList.add("promo-slide--show");
+//       // slides[0].classList.remove("promo-slide--no-show");
+//       // slides[1].classList.add("promo-slide--no-show");
+//       // slides[0].display="none";
+//       // document.querySelector(".indicator").setAttribute("checked", "");
+//       // document.querySelector(".indicator--second").removeAttribute("checked");
+//       // slides[0].style.display="block";
+//       // slides[1].style.display="none";
+//       // slides[1].classList.remove("promo-slide--show");
+//     } else {
+//       console.log("next");
+//       slide1.classList.toggle("promo-slide--no-show");
+//       slide2.classList.toggle("promo-slide--show");
+//       // slide1.style.display="none";
+//       // slide2.style.display="block";
+
+//       // slides[0].classList.add("promo-slide--no-show");
+//       // slides[1].classList.add("promo-slide--show");
+//       // document.querySelector(".indicator--second").setAttribute("checked", "");
+//       // document.querySelector(".indicator").removeAttribute("checked");
+//       // slides[1].style.display="block";
+//       // slides[0].style.display="none";
+//       // slides[0].classList.add("promo-slide--no-show");
+//     }
+//   });
+// });
+
+// // function changeSlide(slider)
