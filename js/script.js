@@ -169,6 +169,8 @@ function findInd(array, target){
 return index;
 }
 
+// Полифил для closest
+
 if (!Element.prototype.matches) {
   Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
 }
@@ -198,7 +200,9 @@ var updateDots = function(currentDot, targetDot) {
   targetDot.classList.add("current-slide");
 };
 
-var hideShowArrows = function(slides, prevButton, nextButton, targetIndex) {
+// Блокировка/разблокировка стрелок 
+
+var disableArrows = function(slides, prevButton, nextButton, targetIndex) {
   if (targetIndex === 0) {
     prevButton.setAttribute("disabled", "");
     nextButton.removeAttribute("disabled", "");
@@ -217,11 +221,10 @@ prevButton.addEventListener("click", function(e) {
   var currentDot = dotsNav.querySelector(".current-slide");
   var prevDot = currentDot.previousElementSibling;
   var prevIndex = findInd(slides, prevSlide);
-  // var prevIndex = slides.findIndex(slide => slide === prevSlide);
 
   moveToSlide(track, currentSlide, prevSlide);
   updateDots(currentDot, prevDot);
-  hideShowArrows(slides, prevButton, nextButton, prevIndex);
+  disableArrows(slides, prevButton, nextButton, prevIndex);
 });
 
 nextButton.addEventListener("click", function(e) {
@@ -230,10 +233,9 @@ nextButton.addEventListener("click", function(e) {
   var currentDot = dotsNav.querySelector(".current-slide");
   var nextDot = currentDot.nextElementSibling;
   var nextIndex = findInd(slides, nextSlide);
-  // var nextIndex = slides.findIndex(slide => slide === nextSlide);
   moveToSlide(track, currentSlide, nextSlide);
   updateDots(currentDot, nextDot);
-  hideShowArrows(slides, prevButton, nextButton, nextIndex);
+  disableArrows(slides, prevButton, nextButton, nextIndex);
 });
 
 dotsNav.addEventListener("click", function(e) {
@@ -244,55 +246,9 @@ dotsNav.addEventListener("click", function(e) {
   var currentSlide = track.querySelector(".current-slide");
   var currentDot = dotsNav.querySelector(".current-slide");
   var targetIndex = findInd(dots, targetDot);
-  // var targetIndex = dots.findIndex(dot => dot === targetDot);
   var targetSlide = slides[targetIndex];
 
   moveToSlide(track, currentSlide, targetSlide);
   updateDots(currentDot, targetDot);
-  hideShowArrows(slides, prevButton, nextButton, targetIndex);
+  disableArrows(slides, prevButton, nextButton, targetIndex);
 });
-
-
-// var promoSliderButtons = Array.prototype.slice.call(document.querySelectorAll(".promo-slider-controls__item"));
-// var slides = Array.prototype.slice.call(document.querySelectorAll(".promo-slide"));
-
-// var slide1 = document.querySelector(".promo-slider__list .promo-slide-1");
-
-// var slide2 = document.querySelector(".promo-slider__list .promo-slide-2");
-
-// promoSliderButtons.forEach(function(el) {
-//   el.addEventListener("click", function(evt) {
-//     evt.preventDefault();
-//     if (el.classList.contains("previous")) {
-//       console.log("prev");
-//       slide2.classList.toggle("promo-slide--no-show");
-//       slide1.classList.toggle("promo-slide--show");
-//       // slides[1].classList.remove("promo-slide--show");
-//       // slides[0].classList.add("promo-slide--show");
-//       // slides[0].classList.remove("promo-slide--no-show");
-//       // slides[1].classList.add("promo-slide--no-show");
-//       // slides[0].display="none";
-//       // document.querySelector(".indicator").setAttribute("checked", "");
-//       // document.querySelector(".indicator--second").removeAttribute("checked");
-//       // slides[0].style.display="block";
-//       // slides[1].style.display="none";
-//       // slides[1].classList.remove("promo-slide--show");
-//     } else {
-//       console.log("next");
-//       slide1.classList.toggle("promo-slide--no-show");
-//       slide2.classList.toggle("promo-slide--show");
-//       // slide1.style.display="none";
-//       // slide2.style.display="block";
-
-//       // slides[0].classList.add("promo-slide--no-show");
-//       // slides[1].classList.add("promo-slide--show");
-//       // document.querySelector(".indicator--second").setAttribute("checked", "");
-//       // document.querySelector(".indicator").removeAttribute("checked");
-//       // slides[1].style.display="block";
-//       // slides[0].style.display="none";
-//       // slides[0].classList.add("promo-slide--no-show");
-//     }
-//   });
-// });
-
-// // function changeSlide(slider)

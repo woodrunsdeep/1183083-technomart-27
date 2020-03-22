@@ -5,7 +5,7 @@
     <title>Техномарт: Главная</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="./css/normalize-min.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main-min.css">
   </head>
   <body>
     <header class="header">
@@ -125,86 +125,32 @@
           </li>
         </ul>
         <div class="carousel">
-
           <button class="carousel__button carousel__button--previous" disabled>Предыдущий слайд</button>
           <button class="carousel__button carousel__button--next">Следующий слайд</button>
-      
           <div class="carousel__nav">
-              <button class="carousel__indicator current-slide"></button>
-              <button class="carousel__indicator"></button>
-            </div>
-      
+            <button class="carousel__indicator current-slide">Первый слайд</button>
+            <button class="carousel__indicator">Второй слайд</button>
+          </div>
           <div class="carousel__track-container">
             <ul class="carousel__track">
-                
               <li class="carousel__slide slide current-slide">
                 <div class="slide__content">
                   <h3 class="slide__title">Дрели</h3>
                   <p class="slide__paragraph">Соседям на радость!</p>
                 </div>
-                <img class="carousel__image" src="https://woodrunsdeep.github.io/1183083-technomart-27/img/slider-image-drill.jpg">
+                <img class="carousel__image" src="https://woodrunsdeep.github.io/1183083-technomart-27/img/slider-image-drill.jpg" width="620" height="266" alt="Мужчина сверлит кирпичную стену дрелью">
               </li>
-      
               <li class="carousel__slide slide">
                 <div class="slide__content">
                   <h3 class="slide__title">Перфораторы</h3>
                   <p class="slide__paragraph">Настоящие мужские игрушки</p>
                 </div>
-                <img class="carousel__image" src="https://woodrunsdeep.github.io/1183083-technomart-27/img/slider-image-hammer-drill.jpg">
+                <img class="carousel__image" src="https://woodrunsdeep.github.io/1183083-technomart-27/img/slider-image-hammer-drill.jpg" width="620" height="266" alt="Мужчина сверлит бетонную стену перфоратором">
               </li>
-      
             </ul>
+            <a class="button button--middle carousel__link" href="./catalog.html">Открыть каталог</a>
           </div>
-          <a class="button button--middle carousel__link" href="./catalog.html">Открыть каталог</a>
-      
         </div>
-        <!-- <div class="promo-slider">
-
-          <ul class="promo-slider__list">
-
-            <li class="promo-slider__item promo-slide promo-slide--current promo-slide-1">
-              <h3 class="promo-slide__title">Дрели</h3>
-              <p class="promo-slide__paragraph">Соседям на радость!</p>
-              <a class="button button--middle promo-slide__button" href="./catalog.html">Открыть каталог</a>
-            </li>
-
-            <li class="promo-slider__item promo-slide promo-slide-2">
-              <h3 class="promo-slide__title">Перфораторы</h3>
-              <p class="promo-slide__paragraph">Настоящие мужские игрушки</p>
-              <a class="button button--middle promo-slide__button" href="./catalog.html">Открыть каталог</a>
-            </li>
-
-          </ul>
-          
-          <div class="promo-slider__controls">
-            <button class="arrow-button arrow-button--previous"></button>
-            <button class="arrow-button arrow-button--next"></button>            
-          </div>
-          
-          <div class="radio-buttons">
-            <input class="radio-1 visually-hidden" type="radio" name="one" id="one" checked>
-            <input class="radio-2 visually-hidden" type="radio" name="one" id="two">
-            <label class="radio-button" for="one"></label>
-            <label class="radio-button" for="two"></label>
-            <label for="two"></label>
-            <button></button>
-            <button class="radio-button"></button>
-          </div>
-          <input class="promo-slide-1 indicator" type="radio" name="promo-toggle" id="promo-slide-1" checked>
-          <input class="promo-slide-2 indicator indicator--second" type="radio" name="promo-toggle" id="promo-slide-2">
-          <button class="promo-slider-controls__item previous" type="button">Предыдущий слайд</button>
-          <button class="promo-slider-controls__item next">Следующий слайд</button>
-          
-          <label class="promo-slide-1" for="promo-slide-1">
-            <span class="visually-hidden">Слайд - Дрели</span>
-            <span class="indicator"></span>
-          </label>
-          <label class="promo-slide-2" for="promo-slide-2">
-            <span class="visually-hidden">Слайд - Перфораторы</span>
-            <span class="indicator indicator--second"></span>
-          </label>
-
-        </div> -->
       </section>
       <section class="popular-products">
         <div class="section__wrapper">
@@ -220,7 +166,9 @@
               <div class="product__visuals">
                 <img class="product__image" src="./img/bfg-9000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
                 <div class="action-buttons">
-                  <button class="button action-buttons__button button--to-cart" type="button">Купить</button>
+                  <button class="button action-buttons__button button--to-cart" type="button">
+                    <span class="cart"></span>
+                    Купить</button>
                   <button class="button action-buttons__button button--bookmark" type="button">В закладки</button>
                 </div>
               </div>
@@ -238,7 +186,9 @@
               <div class="product__visuals">
                 <img class="product__image" src="./img/bfg-3000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
                 <div class="action-buttons">
-                  <button class="button action-buttons__button button--to-cart" type="button">Купить</button>
+                  <button class="button action-buttons__button button--to-cart" type="button">
+                    <span class="cart"></span>
+                    Купить</button>
                   <button class="button action-buttons__button button--bookmark" type="button">В закладки</button>
                 </div>
               </div>
@@ -256,7 +206,9 @@
               <div class="product__visuals">
                 <img class="product__image" src="./img/bfg-6000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
                 <div class="action-buttons">
-                  <button class="button action-buttons__button button--to-cart" type="button">Купить</button>
+                  <button class="button action-buttons__button button--to-cart" type="button">
+                    <span class="cart"></span>
+                    Купить</button>
                   <button class="button action-buttons__button button--bookmark" type="button">В закладки</button>
                 </div>
               </div>
@@ -276,7 +228,9 @@
               <div class="product__visuals">
                 <img class="product__image" src="./img/bfg-2000.jpg" width="218" height="170" alt="Аккумуляторный перфоратор с патроном SDS plus">
                 <div class="action-buttons">
-                  <button class="button action-buttons__button button--to-cart" type="button">Купить</button>
+                  <button class="button action-buttons__button button--to-cart" type="button">
+                    <span class="cart"></span>
+                    Купить</button>
                   <button class="button action-buttons__button button--bookmark" type="button">В закладки</button>
                 </div>
               </div>
@@ -564,7 +518,6 @@
           </button>
         </div>
     </section>
-    <script src="./js/script.js"></script>
-    <!-- <script src="./js/slider-script.js"></script> -->
+    <script src="./js/script-min.js"></script>
   </body>
 </html>
