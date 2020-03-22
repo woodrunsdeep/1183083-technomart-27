@@ -158,6 +158,17 @@ var setSlidePosition = function(slide, index) {
     slide.style.left = slideWidth * index + "px";
 };
 
+function findInd(array, target){
+	var index;
+	for (var i = 0; i < array.length; ++i) {
+    if (array[i] == target) {
+        index = i;
+        break;
+    }
+}
+return index;
+}
+
 slides.forEach(setSlidePosition);
 
 var moveToSlide = function(track, currentSlide, targetSlide) {
@@ -189,7 +200,8 @@ prevButton.addEventListener("click", function(e) {
   var prevSlide = currentSlide.previousElementSibling;
   var currentDot = dotsNav.querySelector(".current-slide");
   var prevDot = currentDot.previousElementSibling;
-  var prevIndex = slides.findIndex(slide => slide === prevSlide);
+  var prevIndex = findInd(slides, prevSlide);
+  // var prevIndex = slides.findIndex(slide => slide === prevSlide);
 
   moveToSlide(track, currentSlide, prevSlide);
   updateDots(currentDot, prevDot);
@@ -201,7 +213,8 @@ nextButton.addEventListener("click", function(e) {
   var nextSlide = currentSlide.nextElementSibling;
   var currentDot = dotsNav.querySelector(".current-slide");
   var nextDot = currentDot.nextElementSibling;
-  var nextIndex = slides.findIndex(slide => slide === nextSlide);
+  var nextIndex = findInd(slides, nextSlide);
+  // var nextIndex = slides.findIndex(slide => slide === nextSlide);
   moveToSlide(track, currentSlide, nextSlide);
   updateDots(currentDot, nextDot);
   hideShowArrows(slides, prevButton, nextButton, nextIndex);
@@ -214,7 +227,8 @@ dotsNav.addEventListener("click", function(e) {
 
   var currentSlide = track.querySelector(".current-slide");
   var currentDot = dotsNav.querySelector(".current-slide");
-  var targetIndex = dots.findIndex(dot => dot === targetDot);
+  var targetIndex = findInd(dots, targetDot);
+  // var targetIndex = dots.findIndex(dot => dot === targetDot);
   var targetSlide = slides[targetIndex];
 
   moveToSlide(track, currentSlide, targetSlide);
