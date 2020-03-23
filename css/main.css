@@ -110,7 +110,7 @@ img {
   box-shadow: 0 5px 0 0 #9a212a;
 }
 
-.logo:active {
+.logo[href]:active {
   background-color: #ba2732;
   box-shadow: 0 5px 0 0 #8e1e26;
 }
@@ -585,7 +585,7 @@ img {
   background-color: #293449;
 }
 
-.main-nav__link:active {
+.main-nav__link[href]:active {
   color: rgba(255, 255, 255, 0.5);
 }
 
